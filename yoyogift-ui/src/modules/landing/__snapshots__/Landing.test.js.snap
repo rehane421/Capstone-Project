@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Landing 1`] = `
+<div>
+  <div
+    className="offerMessage"
+    id="promo-ribbon"
+  >
+    Use code TRAVEL15 to get 15% off
+  </div>
+  <div
+    className="mainSlide"
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
+      >
+        <h1
+          className="sectionTitle"
+        >
+          Buy, Send, & Redeem Gift Cards
+        </h1>
+        <div
+          className="sectionText"
+        >
+          <p>
+            YoYo makes it easy for you to give the perfect gift card
+          </p>
+          <p>
+            and conveniently manage them from any device!!
+          </p>
+        </div>
+        <Link
+          className="cardsBtn"
+          replace={false}
+          to="/giftCards"
+        >
+          <WithStyles(Button)
+            variant="contained"
+          >
+            Explore Cards
+          </WithStyles(Button)>
+        </Link>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={6}
+        xs={12}
+      >
+        <img
+          alt="YoYoImg"
+          className="GiftImg"
+          src="YoyoGift.png"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+  <div
+    className="vendors"
+  >
+    <h2
+      className="vendorTitle"
+    >
+      Buy Gift Cards from your favourite Vendors
+    </h2>
+    <div
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <div
+        className="vendorContainer"
+      >
+        <img
+          alt="amazon"
+          className="vendorImage"
+          src="https://images.gyft.com/merchants/i-1466456891460_667_hd.png"
+        />
+        <p
+          className="vendorName"
+        >
+          Whole Foods Market
+        </p>
+      </div>
+      <div
+        className="vendorContainer"
+      >
+        <img
+          alt="Ebay"
+          className="vendorImage"
+          src="https://images.gyft.com/merchants/i-188-1346844971201-60_hd.png"
+        />
+        <p
+          className="vendorName"
+        >
+          Ebay
+        </p>
+      </div>
+      <div
+        className="vendorContainer"
+      >
+        <img
+          alt="amazon"
+          className="vendorImage"
+          src="https://pngimg.com/uploads/amazon/amazon_PNG21.png"
+        />
+        <p
+          className="vendorName"
+        >
+          Amazon
+        </p>
+      </div>
+      <div
+        className="vendorContainer"
+      >
+        <img
+          alt="Flipkart"
+          className="vendorImage"
+          src="http://www.adageindia.in/photo/47460433/Is-Flipkarts-New-Logo-Strong-Enough-To-Behold-Its-Brand-Identity.jpg?19122"
+        />
+        <p
+          className="vendorName"
+        >
+          Flipkart
+        </p>
+      </div>
+      <div
+        className="vendorContainer"
+      >
+        <img
+          alt="Zomato"
+          className="vendorImage"
+          src="https://cms.qz.com/wp-content/uploads/2015/05/zomatos-4th-logo-2012-14.png?w=900&h=900&crop=1&strip=all&quality=75"
+        />
+        <p
+          className="vendorName"
+        >
+          Zomato
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

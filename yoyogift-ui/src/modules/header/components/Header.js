@@ -10,13 +10,13 @@ import { login, logout, createUser } from "../state/actions";
 import { bindActionCreators } from "redux";
 import history from "../../common/components/history";
 import MySnackBar from "../../common/components/Snackbar";
-import Styles from '../../../assets/css/Header.module.css';
+import Styles from "../../../assets/css/Header.module.css";
 
 const styles = {
   root: {
     flexGrow: 1,
     flexShrink: 1,
-    width: '100%' 
+    width: "100%"
   },
   grow: {
     flexGrow: 1
@@ -26,28 +26,25 @@ const styles = {
   }
 };
 
-class Header extends Component {
-  constructor(props){
-    super(props)
+export class Header extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       showErrorSnack: false
-    }
+    };
   }
   render() {
-    const { showErrorSnack } = this.state
+    const { showErrorSnack } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        {
-          showErrorSnack ? 
-          <MySnackBar message='Network Error! Please try again' color='red' />
-          :
-          null
-        }
+        {showErrorSnack ? (
+          <MySnackBar message="Network Error! Please try again" color="red" />
+        ) : null}
         <AppBar position="static">
           <Toolbar className={classes.toolBar}>
             <Typography variant="h6" color="inherit" className={classes.grow}>
-              <Button onClick={this.goTolanding}>
+              <Button id="home" onClick={this.goTolanding}>
                 <span style={{ fontSize: "1.2em", color: "#ffffff" }}>
                   YOYOGift
                 </span>
@@ -55,24 +52,40 @@ class Header extends Component {
             </Typography>
             {/* {this.props.isLoggedIn ? <Button color="inherit" onClick={this.addUpdateForm}>ADD UPDATE FORM</Button> : null} */}
             {this.props.isLoggedIn ? (
-              <Button className={Styles.headerButton} color="inherit" onClick={this.giftsReceived}>
+              <Button
+                id="giftReceiveButton"
+                className={Styles.headerButton}
+                color="inherit"
+                onClick={this.giftsReceived}
+              >
                 GIFTS RECEIVED
               </Button>
             ) : null}
             {this.props.isLoggedIn ? (
-              <Button className={Styles.headerButton} color="inherit" onClick={this.giftsSend}>
+              <Button
+                id="sendGiftButton"
+                className={Styles.headerButton}
+                color="inherit"
+                onClick={this.giftsSend}
+              >
                 GIFTS SENT
               </Button>
             ) : null}
             {this.props.isLoggedIn ? (
-              <Button className={Styles.headerButton} color="inherit" onClick={this.myProfile}>
+              <Button
+                id="profile"
+                className={Styles.headerButton}
+                color="inherit"
+                onClick={this.myProfile}
+              >
                 MY PROFILE
               </Button>
             ) : null}
-            <Button className={Styles.headerButton}
+            <Button
+              id="authButton"
+              className={Styles.headerButton}
               color="inherit"
-              onClick={() => {
-              }}
+              onClick={this.logOut}
             >
               {this.props.isLoggedIn ? "LOGOUT" : "LOGIN"}
             </Button>
@@ -103,21 +116,20 @@ class Header extends Component {
     window.sessionStorage.removeItem("user");
     window.sessionStorage.removeItem("usertype");
   };
-
 }
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     isLoggedIn: state.login.loginStatus,
     userDetails: state.login.detailsObject
   };
 };
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
   return bindActionCreators({ login, logout, createUser }, dispatch);
 };
 

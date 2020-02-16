@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header component 1`] = `
+<div>
+  <WithStyles(AppBar)
+    position="static"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Typography)
+        color="inherit"
+        variant="h6"
+      >
+        <WithStyles(Button)
+          id="home"
+          onClick={[Function]}
+        >
+          <span
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontSize": "1.2em",
+              }
+            }
+          >
+            YOYOGift
+          </span>
+        </WithStyles(Button)>
+      </WithStyles(Typography)>
+      <WithStyles(Button)
+        className="headerButton"
+        color="inherit"
+        id="giftReceiveButton"
+        onClick={[Function]}
+      >
+        GIFTS RECEIVED
+      </WithStyles(Button)>
+      <WithStyles(Button)
+        className="headerButton"
+        color="inherit"
+        id="sendGiftButton"
+        onClick={[Function]}
+      >
+        GIFTS SENT
+      </WithStyles(Button)>
+      <WithStyles(Button)
+        className="headerButton"
+        color="inherit"
+        id="profile"
+        onClick={[Function]}
+      >
+        MY PROFILE
+      </WithStyles(Button)>
+      <WithStyles(Button)
+        className="headerButton"
+        color="inherit"
+        id="authButton"
+        onClick={[Function]}
+      >
+        LOGOUT
+      </WithStyles(Button)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+</div>
+`;

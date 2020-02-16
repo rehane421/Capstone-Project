@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-function Footer(props) {
+export function Footer(props) {
   const { classes } = props;
 
   return (

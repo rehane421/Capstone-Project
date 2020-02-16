@@ -15,8 +15,8 @@ import { TablePaginationActionsWrapped } from "../../common/components/TablePagi
 const styles = theme => ({
   root: {
     width: "90%",
-    margin: '2%',
-    padding: '1%'
+    margin: "2%",
+    padding: "1%"
   },
   table: {
     minWidth: 100
@@ -26,9 +26,9 @@ const styles = theme => ({
   }
 });
 
-class GiftsList extends React.Component {
+export class GiftsList extends React.Component {
   state = {
-    giftCardsFiltered: this.props.giftCardsFiltered,
+    // giftCardsFiltered: this.props.giftCardsFiltered,
     page: 0,
     rowsPerPage: 10
   };
@@ -58,7 +58,10 @@ class GiftsList extends React.Component {
                   .map(giftCard => {
                     return (
                       <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <GiftCard giftCard={giftCard} userEmail={userDetails.email}/>
+                        <GiftCard
+                          giftCard={giftCard}
+                          userEmail={userDetails.email}
+                        />
                         {/* {(userDetails.email === "lathak95@gmail.com" || this.props.userDetails.email === "yoyogiftg2@gmail.com")? <Button variant="contained" color="primary" onClick={()=> this.props.handleUpdateClick(giftCard.id)}>UPDATE</Button> : null} */}
                       </Grid>
                     );

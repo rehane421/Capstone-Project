@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Should render Footer component 1`] = `
+<div>
+  <WithStyles(AppBar)
+    color="default"
+    position="static"
+  >
+    <WithStyles(Toolbar)>
+      <p
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        ©2019 YoYo, Inc. All Rights Reserved.
+      </p>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+</div>
+`;

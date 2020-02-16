@@ -1,4 +1,4 @@
-import "react-app-polyfill/ie9";
+import "react-app-polyfill/ie11";
 import "core-js";
 import "babel-polyfill";
 import React from "react";
@@ -10,8 +10,12 @@ import reducers from "./store";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import App from "./modules/App";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const store = createStore(reducers, applyMiddleware(thunk));
+const store = createStore(
+  reducers,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <Provider store={store}>
