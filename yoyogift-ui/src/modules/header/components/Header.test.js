@@ -1,11 +1,8 @@
 import React from "react";
 import { shallow } from "../../../enzyme";
 import { shallowToJson } from "enzyme-to-json";
-import { Header } from "../../../modules/header/components/Header";
-import {
-  mapStateToProps,
-  mapDispatchToProps
-} from "../../../modules/header/components/Header";
+import { Header } from "./Header";
+import { mapStateToProps, mapDispatchToProps } from "./Header";
 
 describe("Header", () => {
   let props, wrapper;

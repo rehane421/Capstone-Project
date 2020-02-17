@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ErrorPage 1`] = `
+<img
+  alt="404: Page not found"
+  src="404.png"
+  style={
+    Object {
+      "height": "100vh",
+      "width": "100%",
+    }
+  }
+/>
+`;

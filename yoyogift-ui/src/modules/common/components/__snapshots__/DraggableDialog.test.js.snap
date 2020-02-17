@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DraggableDialog 1`] = `
+<Fragment>
+  <WithStyles(Button)
+    color="primary"
+    id="sendGift"
+    onClick={[Function]}
+    variant="contained"
+  >
+    send this gift card
+  </WithStyles(Button)>
+  <WithStyles(Dialog)
+    PaperComponent={[Function]}
+    aria-labelledby="draggable-dialog-title"
+    open={false}
+  >
+    <WithStyles(DialogTitle)
+      id="draggable-dialog-title"
+      style={
+        Object {
+          "cursor": "move",
+        }
+      }
+    >
+      Send Gift card
+    </WithStyles(DialogTitle)>
+    <WithStyles(DialogContent)>
+      <WithStyles(DialogContentText)>
+        You can send this gift card to anyone. Just fill-in the email address below
+      </WithStyles(DialogContentText)>
+      <Formik
+        enableReinitialize={false}
+        initialValues={
+          Object {
+            "email": "",
+          }
+        }
+        isInitialValid={false}
+        onSubmit={[Function]}
+        validate={[Function]}
+        validateOnBlur={true}
+        validateOnChange={true}
+      >
+        <Component />
+      </Formik>
+    </WithStyles(DialogContent)>
+  </WithStyles(Dialog)>
+</Fragment>
+`;

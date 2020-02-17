@@ -19,7 +19,7 @@ function PaperComponent(props) {
   );
 }
 
-class DraggableDialog extends React.Component {
+export class DraggableDialog extends React.Component {
   state = {
     open: false
   };
@@ -41,6 +41,7 @@ class DraggableDialog extends React.Component {
     return (
       <React.Fragment>
         <Button
+          id="sendGift"
           variant="contained"
           color="primary"
           onClick={this.handleOpenClose}
@@ -104,8 +105,9 @@ class DraggableDialog extends React.Component {
                       Cancel
                     </Button>
                     <Button
+                      id="subBtn"
                       type="submit"
-                      //onClick={this.handleSendAndClose}
+                      onClick={this.handleSendAndClose}
                       disabled={isSubmitting}
                       color="primary"
                     >

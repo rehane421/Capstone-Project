@@ -10,7 +10,7 @@ import { fetchCard, updateCardCount } from "../state/actions";
 import GiftShow from "../components/GiftShow";
 import Snackbar from "../../common/components/Snackbar";
 import * as emailjs from "emailjs-com";
-class GiftShowContainer extends Component {
+export class GiftShowContainer extends Component {
   state = {
     showErrorSnackBar: false,
     showSuccessSnackBar: false,
@@ -38,9 +38,11 @@ class GiftShowContainer extends Component {
         });
     }
   }
-  componentDidCatch(error, info) {
-    console.log(error);
-  }
+
+  // componentDidCatch(error, info) {
+  //   console.log(error);
+  // }
+
   validateSend = async sendTo => {
     if (
       this.state.cardPoints &&
@@ -125,7 +127,6 @@ class GiftShowContainer extends Component {
         <CircularProgress style={{ marginLeft: "50%", marginTop: "10%" }} />
       );
     }
-    console.log(typeof (cardPoints - balance_points));
     let points = isNaN(cardPoints - balance_points)
       ? "You need more points to gift this card"
       : "You need " +
@@ -160,7 +161,7 @@ class GiftShowContainer extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = state => {
   return {
     gift: state.gifts.giftCard,
     user: state.users.UserDetails,

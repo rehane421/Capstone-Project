@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render GiftsListContainer 1`] = `
+<WithStyles(CircularProgress)
+  style={
+    Object {
+      "marginLeft": "50%",
+      "marginTop": "10%",
+    }
+  }
+/>
+`;

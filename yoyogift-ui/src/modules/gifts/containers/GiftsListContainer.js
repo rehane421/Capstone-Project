@@ -12,8 +12,8 @@ import AscendingButton from "@material-ui/icons/SwapVert";
 import IconButton from "@material-ui/core/IconButton";
 import DescendingButton from "@material-ui/icons/SwapVerticalCircle";
 import Tooltip from "@material-ui/core/Tooltip";
-import { adminEmail } from '../../../config/constants';
-import Grid from '@material-ui/core/Grid';
+import { adminEmail } from "../../../config/constants";
+import Grid from "@material-ui/core/Grid";
 
 import {
   comparePointsAsc,
@@ -25,14 +25,14 @@ import {
 } from "../../common/components/CompareForSort";
 
 const sortCategoryArray = ["Points", "Count", "Validity"];
-class GiftsListContainer extends React.Component {
+export class GiftsListContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       //sortOrder : true (ascending order) and false (descending order)
       sortOrder: true,
       sortByValue: "None",
-      filterValue: 'All'
+      filterValue: "All"
     };
   }
   componentDidMount() {
@@ -54,8 +54,8 @@ class GiftsListContainer extends React.Component {
       target: {
         value: this.state.sortByValue
       }
-    }
-    this.onChangeSort(e)
+    };
+    this.onChangeSort(e);
     this.setState({ sortOrder: !this.state.sortOrder });
   };
   // handleClickCard = (id) => {
@@ -71,7 +71,7 @@ class GiftsListContainer extends React.Component {
     const selectedValue = e.target.value;
     this.setState({
       filterValue: e.target.value
-    })
+    });
     let newGiftCard = [];
     if (selectedValue !== "All") {
       this.props.giftCards.forEach(element => {
@@ -82,16 +82,19 @@ class GiftsListContainer extends React.Component {
     } else {
       newGiftCard = this.props.giftCards;
     }
-    this.props.fetchCardFilter(newGiftCard)
+    this.props.fetchCardFilter(newGiftCard);
   };
 
   onChangeSort = e => {
     const { sortOrder } = this.state;
-    const giftCards = this.state.filterValue === 'All' ? this.props.giftCards : this.props.giftCardsFiltered;
+    const giftCards =
+      this.state.filterValue === "All"
+        ? this.props.giftCards
+        : this.props.giftCardsFiltered;
     this.setState({
       sortByValue: e.target.value,
       sortOrder: !this.state.sortOrder
-    })
+    });
     let newGiftCard = giftCards;
     if (e.target.value !== "None") {
       switch (e.target.value) {
@@ -192,23 +195,24 @@ class GiftsListContainer extends React.Component {
               >
                 <IconButton
                   onClick={this.handleSortButtonClick}
-                  disabled={this.state.sortByValue === 'None'}>
+                  disabled={this.state.sortByValue === "None"}
+                >
                   <AscendingButton />
                 </IconButton>
               </Tooltip>
             ) : (
-                <Tooltip
-                  title={
-                    this.state.sortByValue === "Validity"
-                      ? "Newest to Oldest"
-                      : "High to Low"
-                  }
-                >
-                  <IconButton onClick={this.handleSortButtonClick}>
-                    <DescendingButton />
-                  </IconButton>
-                </Tooltip>
-              )}
+              <Tooltip
+                title={
+                  this.state.sortByValue === "Validity"
+                    ? "Newest to Oldest"
+                    : "High to Low"
+                }
+              >
+                <IconButton onClick={this.handleSortButtonClick}>
+                  <DescendingButton />
+                </IconButton>
+              </Tooltip>
+            )}
           </Grid>
           <Grid item xs={12} sm={3}>
             {adminEmail.includes(this.props.userDetails.email) ? (
@@ -219,7 +223,7 @@ class GiftsListContainer extends React.Component {
                 onClick={this.addUpdateForm}
               >
                 ADD CARD
-          </Button>
+              </Button>
             ) : null}
           </Grid>
           {/* <Grid item xs={12} sm={3}>
@@ -227,7 +231,7 @@ class GiftsListContainer extends React.Component {
           </Grid> */}
         </Grid>
 
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: "center" }}>
           <GiftsList
             {...this.props}
             handleClickCard={this.handleClickCard}
@@ -251,7 +255,8 @@ GiftsListContainer.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default connect(
-  mapStateToProps,
-  { fetchCards, fetchCard, fetchCardFilter }
-)(GiftsListContainer);
+export default connect(mapStateToProps, {
+  fetchCards,
+  fetchCard,
+  fetchCardFilter
+})(GiftsListContainer);

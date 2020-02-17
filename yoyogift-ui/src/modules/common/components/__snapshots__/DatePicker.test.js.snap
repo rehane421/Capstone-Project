@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DatePickers 1`] = `
+<DatePicker
+  classes={
+    Object {
+      "container": "DatePicker-container-1",
+      "root": "undefined root",
+      "textField": "DatePicker-textField-2",
+    }
+  }
+/>
+`;
