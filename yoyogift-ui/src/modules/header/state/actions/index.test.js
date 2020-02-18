@@ -24,8 +24,4 @@ it("createUser", async () => {
   const dispatch = jest.fn().mockImplementation(args => {});
   const returnedFunction = createUser(userDetail[0]);
   await returnedFunction(dispatch);
-  // expect(dispatch).toHaveBeenCalledWith({
-  //   type: RECEIVED_CARDS,
-  //   payload: { card: "test" }
-  // });
 });

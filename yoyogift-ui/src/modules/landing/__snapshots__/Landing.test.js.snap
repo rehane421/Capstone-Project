@@ -11,11 +11,11 @@ exports[`should render Landing 1`] = `
   <div
     className="mainSlide"
   >
-    <WithStyles(Grid)
+    <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
     >
-      <WithStyles(Grid)
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={6}
         xs={12}
@@ -40,14 +40,14 @@ exports[`should render Landing 1`] = `
           replace={false}
           to="/giftCards"
         >
-          <WithStyles(Button)
+          <WithStyles(ForwardRef(Button))
             variant="contained"
           >
             Explore Cards
-          </WithStyles(Button)>
+          </WithStyles(ForwardRef(Button))>
         </Link>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
         item={true}
         sm={6}
         xs={12}
@@ -57,8 +57,8 @@ exports[`should render Landing 1`] = `
           className="GiftImg"
           src="YoyoGift.png"
         />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </div>
   <div
     className="vendors"

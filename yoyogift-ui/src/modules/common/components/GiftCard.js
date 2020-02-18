@@ -47,12 +47,12 @@ const styles = theme => ({
   }
 });
 
-class GiftCard extends React.Component {
+export class GiftCard extends React.Component {
   state = { expanded: false };
 
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
-  };
+  // handleExpandClick = () => {
+  //   this.setState(state => ({ expanded: !state.expanded }));
+  // };
 
   // handleClickCard = () => {
   //   this.props.fetchCard(this.props.giftCard.id);
@@ -73,10 +73,10 @@ class GiftCard extends React.Component {
             adminEmail.includes(userEmail) ? (
               <>
                 <Link to={`/AddUpdateForm/${giftCard.id}`}>
-                <IconButton>
-                  <EditIcon />
-                </IconButton>
-              </Link>
+                  <IconButton>
+                    <EditIcon />
+                  </IconButton>
+                </Link>
               </>
             ) : null
           }

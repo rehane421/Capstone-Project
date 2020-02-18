@@ -49,6 +49,11 @@ exports[`should render App 1`] = `
       <Route
         component={[Function]}
         exact={true}
+        path="/Login"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         path="/GiftsReceived"
       />
       <Route
@@ -79,4 +84,29 @@ exports[`should render App 1`] = `
   </Router>
   <WithStyles(Footer) />
 </LocalizeProvider>
+`;
+
+exports[`should render Loading 1`] = `
+<h2
+  style={
+    Object {
+      "background": "#b3d9f7",
+      "color": "white",
+      "fontSize": "20px",
+      "fontWeight": "500",
+      "height": "40px",
+      "paddingTop": "5px",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+    }
+  }
+>
+  Oh nooess! Something went wrong. Try re-loading!
+</h2>
+`;
+
+exports[`should render Loading 2`] = `
+<WithStyles(ForwardRef(LinearProgress))
+  color="secondary"
+/>
 `;

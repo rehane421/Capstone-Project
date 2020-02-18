@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Login 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  container={true}
+  direction="column"
+  justify="center"
+  spacing={0}
+  style={
+    Object {
+      "minHeight": "100vh",
+    }
+  }
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={10}
+  >
+    <div
+      className="makeStyles-mainContainer-5"
+      component="main"
+    >
+      <WithStyles(CssBaseline) />
+      <div
+        className="makeStyles-paper-1"
+      >
+        <WithStyles(ForwardRef(Avatar))
+          className="makeStyles-avatar-2"
+        >
+          <pure(LockOutlinedIcon) />
+        </WithStyles(ForwardRef(Avatar))>
+        <WithStyles(ForwardRef(Typography))
+          component="h1"
+          variant="h5"
+        >
+          Sign in
+        </WithStyles(ForwardRef(Typography))>
+        <form
+          className="makeStyles-form-3"
+          noValidate={true}
+        >
+          <WithStyles(ForwardRef(TextField))
+            autoComplete="email"
+            autoFocus={true}
+            fullWidth={true}
+            id="email"
+            label="Email Address"
+            margin="normal"
+            name="email"
+            onChange={[Function]}
+            required={true}
+            variant="outlined"
+          />
+          <WithStyles(ForwardRef(TextField))
+            autoComplete="current-password"
+            fullWidth={true}
+            id="password"
+            label="Password"
+            margin="normal"
+            name="password"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            variant="outlined"
+          />
+          <WithStyles(ForwardRef(FormControlLabel))
+            control={
+              <ForwardRef(WithStyles)
+                color="primary"
+                value="remember"
+              />
+            }
+            label="Remember me"
+          />
+          <WithStyles(ForwardRef(Button))
+            className="makeStyles-submit-4"
+            color="primary"
+            fullWidth={true}
+            id="xyz"
+            onClick={[Function]}
+            type="submit"
+            variant="contained"
+          >
+            Sign In
+          </WithStyles(ForwardRef(Button))>
+          <u
+            accessType="online"
+            buttonText="Login with Google"
+            className="makeStyles-submit-4"
+            clientId="170084332667-mfcodrlla6eq1mkqu68kf4289sl11pe6.apps.googleusercontent.com"
+            cookiePolicy="single_host_origin"
+            disabledStyle={
+              Object {
+                "opacity": 0.6,
+              }
+            }
+            fetchBasicProfile={true}
+            icon={true}
+            isSignedIn={false}
+            jsSrc="https://apis.google.com/js/api.js"
+            onFailure={[Function]}
+            onRequest={[Function]}
+            onSuccess={[Function]}
+            prompt=""
+            scope="profile email"
+            tag="button"
+            theme="light"
+            type="button"
+            uxMode="popup"
+          />
+          <WithStyles(ForwardRef(Grid))
+            container={true}
+          >
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+              xs={true}
+            >
+              <WithStyles(ForwardRef(Link))
+                href="#"
+                variant="body2"
+              >
+                Forgot password?
+              </WithStyles(ForwardRef(Link))>
+            </WithStyles(ForwardRef(Grid))>
+            <WithStyles(ForwardRef(Grid))
+              item={true}
+            >
+              <WithStyles(ForwardRef(Link))
+                href="#"
+                variant="body2"
+              >
+                Don't have an account? Sign Up
+              </WithStyles(ForwardRef(Link))>
+            </WithStyles(ForwardRef(Grid))>
+          </WithStyles(ForwardRef(Grid))>
+        </form>
+      </div>
+      <Styled(MuiBox)
+        mt={8}
+      />
+    </div>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "../../../enzyme";
 import { shallowToJson } from "enzyme-to-json";
-import { DraggableDialog } from "./DraggableDialog";
+import { DraggableDialog, PaperComponent } from "./DraggableDialog";
 
 let data = {
   values: {
@@ -36,11 +36,13 @@ it("should trigger handleOpenClose click event", () => {
   wrapper.find("#sendGift").simulate("click");
 });
 
+it("should render PaperComponent", () => {
+  let wrapper = shallow(<PaperComponent />);
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
+});
+
 it("should trigger handleSendAndClose click event", () => {
   let wrapper = shallow(<DraggableDialog {...props} values={data.values} />);
-  // wrapper.find(".subBtn").simulate("click");
-  // expect(wrapper.find("form").simulate("submit"));
-  console.log(shallowToJson(wrapper).children[1].children[1].children[1].props);
   shallowToJson(wrapper).children[1].children[1].children[1].props.validate(
     data.values
   );

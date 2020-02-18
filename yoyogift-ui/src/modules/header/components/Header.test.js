@@ -23,6 +23,9 @@ describe("Header", () => {
       login: {
         loginStatus: undefined,
         detailsObject: undefined
+      },
+      userDetails: {
+        first_name: "John"
       }
     };
     expect(mapStateToProps(initialState).detailsObject).toEqual(undefined);

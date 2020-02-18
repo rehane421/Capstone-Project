@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render InputTypeComponent 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(FormControl))>
+    <WithStyles(ForwardRef(InputLabel)) />
+    <WithStyles(ForwardRef(Input))
+      endAdornment={<React.Fragment />}
+      onChange={[Function]}
+      startAdornment={
+        <ForwardRef(WithStyles)
+          position="start"
+        >
+           
+           
+        </ForwardRef(WithStyles)>
+      }
+    />
+    <WithStyles(ForwardRef(FormHelperText))>
+       
+       
+    </WithStyles(ForwardRef(FormHelperText))>
+  </WithStyles(ForwardRef(FormControl))>
+</Fragment>
+`;
+
+exports[`should render InputTypeComponent 2`] = `
+<Fragment>
+  <WithStyles(ForwardRef(FormControl))>
+    <WithStyles(ForwardRef(InputLabel)) />
+    <WithStyles(ForwardRef(Input))
+      endAdornment={
+        <ForwardRef(WithStyles)
+          position="end"
+        >
+           
+          <ForwardRef(WithStyles)>
+            true
+          </ForwardRef(WithStyles)>
+           
+        </ForwardRef(WithStyles)>
+      }
+      onChange={[Function]}
+      startAdornment={<React.Fragment />}
+    />
+    <WithStyles(ForwardRef(FormHelperText))>
+       
+       
+    </WithStyles(ForwardRef(FormHelperText))>
+  </WithStyles(ForwardRef(FormControl))>
+</Fragment>
+`;

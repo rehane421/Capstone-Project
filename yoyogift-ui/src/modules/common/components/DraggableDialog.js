@@ -11,7 +11,7 @@ import TextField from "@material-ui/core/TextField";
 import { Formik } from "formik";
 import { Typography } from "@material-ui/core";
 
-function PaperComponent(props) {
+export function PaperComponent(props) {
   return (
     <Draggable cancel={'[class*="MuiDialogContent-root"]'}>
       <Paper {...props} />

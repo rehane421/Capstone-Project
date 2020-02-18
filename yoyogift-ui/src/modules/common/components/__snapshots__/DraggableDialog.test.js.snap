@@ -2,20 +2,20 @@
 
 exports[`should render DraggableDialog 1`] = `
 <Fragment>
-  <WithStyles(Button)
+  <WithStyles(ForwardRef(Button))
     color="primary"
     id="sendGift"
     onClick={[Function]}
     variant="contained"
   >
     send this gift card
-  </WithStyles(Button)>
-  <WithStyles(Dialog)
+  </WithStyles(ForwardRef(Button))>
+  <WithStyles(ForwardRef(Dialog))
     PaperComponent={[Function]}
     aria-labelledby="draggable-dialog-title"
     open={false}
   >
-    <WithStyles(DialogTitle)
+    <WithStyles(ForwardRef(DialogTitle))
       id="draggable-dialog-title"
       style={
         Object {
@@ -24,11 +24,11 @@ exports[`should render DraggableDialog 1`] = `
       }
     >
       Send Gift card
-    </WithStyles(DialogTitle)>
-    <WithStyles(DialogContent)>
-      <WithStyles(DialogContentText)>
+    </WithStyles(ForwardRef(DialogTitle))>
+    <WithStyles(ForwardRef(DialogContent))>
+      <WithStyles(ForwardRef(DialogContentText))>
         You can send this gift card to anyone. Just fill-in the email address below
-      </WithStyles(DialogContentText)>
+      </WithStyles(ForwardRef(DialogContentText))>
       <Formik
         enableReinitialize={false}
         initialValues={
@@ -44,7 +44,39 @@ exports[`should render DraggableDialog 1`] = `
       >
         <Component />
       </Formik>
-    </WithStyles(DialogContent)>
-  </WithStyles(Dialog)>
+    </WithStyles(ForwardRef(DialogContent))>
+  </WithStyles(ForwardRef(Dialog))>
 </Fragment>
+`;
+
+exports[`should render PaperComponent 1`] = `
+<Draggable
+  allowAnyClick={false}
+  axis="both"
+  bounds={false}
+  cancel="[class*=\\"MuiDialogContent-root\\"]"
+  defaultClassName="react-draggable"
+  defaultClassNameDragged="react-draggable-dragged"
+  defaultClassNameDragging="react-draggable-dragging"
+  defaultPosition={
+    Object {
+      "x": 0,
+      "y": 0,
+    }
+  }
+  disabled={false}
+  enableUserSelectHack={true}
+  grid={null}
+  handle={null}
+  offsetParent={null}
+  onDrag={[Function]}
+  onMouseDown={[Function]}
+  onStart={[Function]}
+  onStop={[Function]}
+  position={null}
+  scale={1}
+  transform={null}
+>
+  <WithStyles(ForwardRef(Paper)) />
+</Draggable>
 `;

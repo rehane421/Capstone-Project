@@ -8,7 +8,7 @@ import {
   IconButton
 } from "@material-ui/core";
 
-const InputTypeComponent = props => {
+export const InputTypeComponent = props => {
   return (
     <React.Fragment>
       <FormControl

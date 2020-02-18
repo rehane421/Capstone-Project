@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSentCards } from "../state/actions/index";
-import GiftsSent from "../components/giftsSend.js";
+import GiftsSent from "../components/GiftsSend.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Redirect } from "react-router-dom";
 
-class GiftsSendContainer extends Component {
+export class GiftsSendContainer extends Component {
   componentDidMount() {
     if (this.props.user) this.props.fetchSentCards(this.props.user.email);
   }
-  componentDidCatch(error, info) {
-    console.log(error);
-  }
+  // componentDidCatch(error, info) {
+  //   console.log(error);
+  // }
   render() {
     if (this.props.isLoggedIn) {
       if (!this.props.sentCards || this.props.sentCards.length < 0) {
@@ -48,7 +48,7 @@ class GiftsSendContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     user: state.login.detailsObject,
     isLoggedIn: state.login.loginStatus,

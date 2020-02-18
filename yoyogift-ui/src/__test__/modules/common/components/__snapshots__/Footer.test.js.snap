@@ -2,11 +2,11 @@
 
 exports[`Footer component Should render Footer component 1`] = `
 <div>
-  <WithStyles(AppBar)
+  <WithStyles(ForwardRef(AppBar))
     color="default"
     position="static"
   >
-    <WithStyles(Toolbar)>
+    <WithStyles(ForwardRef(Toolbar))>
       <p
         style={
           Object {
@@ -16,7 +16,7 @@ exports[`Footer component Should render Footer component 1`] = `
       >
         ©2019 YoYo, Inc. All Rights Reserved.
       </p>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
 </div>
 `;

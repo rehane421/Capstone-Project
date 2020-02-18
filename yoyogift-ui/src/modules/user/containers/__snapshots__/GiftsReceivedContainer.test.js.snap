@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`receivedCards when loggedIn and length is 0 1`] = `
+<h2
+  style={
+    Object {
+      "background": "#b3d9f7",
+      "color": "white",
+      "fontSize": "20px",
+      "fontWeight": "500",
+      "height": "40px",
+      "paddingTop": "5px",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+    }
+  }
+>
+  NO DATA
+</h2>
+`;
+
+exports[`should render GiftsReceivedContainer component when looged in 1`] = `
+<WithStyles(ForwardRef(CircularProgress))
+  style={
+    Object {
+      "marginLeft": "50%",
+      "marginTop": "10%",
+    }
+  }
+/>
+`;
+
+exports[`should render GiftsReceivedContainer component when not logged in 1`] = `
+<Redirect
+  push={false}
+  to="/"
+/>
+`;

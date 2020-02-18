@@ -38,9 +38,9 @@ export class GiftsListContainer extends React.Component {
   componentDidMount() {
     this.props.fetchCards();
   }
-  componentDidCatch(error, info) {
-    console.log(error);
-  }
+  // componentDidCatch(error, info) {
+  //   console.log(error);
+  // }
   handleChangePage = (event, page) => {
     this.setState({ page });
   };

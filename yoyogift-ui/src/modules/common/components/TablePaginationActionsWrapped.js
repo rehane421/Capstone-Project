@@ -15,7 +15,7 @@ const actionsStyles = theme => ({
   }
 });
 
-function TablePaginationActions(props) {
+export default function TablePaginationActions(props) {
   const handleFirstPageButtonClick = event => {
     props.onChangePage(event, 0);
   };

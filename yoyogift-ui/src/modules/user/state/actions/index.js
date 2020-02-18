@@ -21,6 +21,7 @@ export const fetchSentCards = email => async dispatch => {
 
 export const userDetails = id => async dispatch => {
   const response = await axiosWrapper.get(`/users/${id}`);
+  console.log(response);
   dispatch({
     type: USER_DETAILS,
     payload: response.data

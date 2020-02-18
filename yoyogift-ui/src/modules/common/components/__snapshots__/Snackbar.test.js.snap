@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Snackbar 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Snackbar))
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "bottom",
+      }
+    }
+    open={true}
+  >
+    <WithStyles(ForwardRef(SnackbarContent))
+      style={
+        Object {
+          "backgroundColor": undefined,
+        }
+      }
+    />
+  </WithStyles(ForwardRef(Snackbar))>
+</Fragment>
+`;

@@ -1,14 +1,17 @@
 import React from "react";
 import { shallow } from "../../../enzyme";
 import { shallowToJson } from "enzyme-to-json";
-import { DatePicker } from "./DatePicker";
+import { GiftCard } from "./GiftCard";
 
 let props = {
   classes: {
-    root: "root"
+    card: "card"
+  },
+  giftCard: {
+    cardName: "cardName"
   }
 };
-it("should render DatePickers", () => {
-  let wrapper = shallow(<DatePicker {...props} />);
+it("should render GiftCard", () => {
+  let wrapper = shallow(<GiftCard {...props} />);
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

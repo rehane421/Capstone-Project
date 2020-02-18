@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render GiftCard 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="card"
+>
+  <WithStyles(ForwardRef(CardHeader))
+    action={null}
+    avatar={
+      <ForwardRef(WithStyles)
+        aria-label="Gift Card"
+      >
+        c
+      </ForwardRef(WithStyles)>
+    }
+    subheader="undefined points"
+    title={
+      <Link
+        replace={false}
+        style={
+          Object {
+            "textDecoration": "none ",
+          }
+        }
+        to="/giftCards/undefined"
+      >
+        cardName
+      </Link>
+    }
+  />
+  <Link
+    replace={false}
+    style={
+      Object {
+        "textDecoration": "none ",
+      }
+    }
+    to="/giftCards/undefined"
+  >
+    <WithStyles(ForwardRef(CardMedia))
+      title="Hurry! Only undefined remaining"
+    />
+  </Link>
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      component="p"
+    />
+  </WithStyles(ForwardRef(CardContent))>
+</WithStyles(ForwardRef(Card))>
+`;
