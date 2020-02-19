@@ -2,15 +2,15 @@
 
 exports[`Header should render Header component 1`] = `
 <div>
-  <WithStyles(AppBar)
+  <WithStyles(ForwardRef(AppBar))
     position="static"
   >
-    <WithStyles(Toolbar)>
-      <WithStyles(Typography)
+    <WithStyles(ForwardRef(Toolbar))>
+      <WithStyles(ForwardRef(Typography))
         color="inherit"
         variant="h6"
       >
-        <WithStyles(Button)
+        <WithStyles(ForwardRef(Button))
           id="home"
           onClick={[Function]}
         >
@@ -24,41 +24,41 @@ exports[`Header should render Header component 1`] = `
           >
             YOYOGift
           </span>
-        </WithStyles(Button)>
-      </WithStyles(Typography)>
-      <WithStyles(Button)
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Button))
         className="headerButton"
         color="inherit"
         id="giftReceiveButton"
         onClick={[Function]}
       >
         GIFTS RECEIVED
-      </WithStyles(Button)>
-      <WithStyles(Button)
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
         className="headerButton"
         color="inherit"
         id="sendGiftButton"
         onClick={[Function]}
       >
         GIFTS SENT
-      </WithStyles(Button)>
-      <WithStyles(Button)
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
         className="headerButton"
         color="inherit"
         id="profile"
         onClick={[Function]}
       >
-        MY PROFILE
-      </WithStyles(Button)>
-      <WithStyles(Button)
+        yudha
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
         className="headerButton"
         color="inherit"
         id="authButton"
         onClick={[Function]}
       >
         LOGOUT
-      </WithStyles(Button)>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
 </div>
 `;

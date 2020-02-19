@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render GiftsSendContainer component 1`] = `
+<Profile
+  detailsObject={
+    Object {
+      "balance_points": 47,
+    }
+  }
+/>
+`;
+
+exports[`should render GiftsSendContainer component 2`] = `
+<Redirect
+  push={false}
+  to="/"
+/>
+`;

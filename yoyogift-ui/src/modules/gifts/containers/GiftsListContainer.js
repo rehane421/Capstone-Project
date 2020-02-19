@@ -41,23 +41,24 @@ export class GiftsListContainer extends React.Component {
   // componentDidCatch(error, info) {
   //   console.log(error);
   // }
-  handleChangePage = (event, page) => {
-    this.setState({ page });
-  };
+  // handleChangePage = (event, page) => {
+  //   this.setState({ page });
+  // };
 
-  handleChangeRowsPerPage = event => {
-    this.setState({ page: 0, rowsPerPage: event.target.value });
-  };
+  // handleChangeRowsPerPage = event => {
+  //   this.setState({ page: 0, rowsPerPage: event.target.value });
+  // };
 
-  handleSortButtonClick = () => {
-    const e = {
-      target: {
-        value: this.state.sortByValue
-      }
-    };
-    this.onChangeSort(e);
-    this.setState({ sortOrder: !this.state.sortOrder });
-  };
+  // handleSortButtonClick = () => {
+  //   const e = {
+  //     target: {
+  //       value: this.state.sortByValue
+  //     }
+  //   };
+  //   this.onChangeSort(e);
+  //   this.setState({ sortOrder: !this.state.sortOrder });
+  // };
+
   // handleClickCard = (id) => {
   //   this.props.fetchCard(id);
   // }
@@ -119,9 +120,9 @@ export class GiftsListContainer extends React.Component {
     this.props.fetchCardFilter(newGiftCard);
   };
 
-  addUpdateForm = () => {
-    history.push("/AddUpdateForm");
-  };
+  // addUpdateForm = () => {
+  //   history.push("/AddUpdateForm");
+  // };
 
   render() {
     if (this.props.giftCards.length === 0) {
@@ -243,7 +244,7 @@ export class GiftsListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     giftCards: state.gifts.giftCards,
     giftCardsFiltered: state.gifts.giftCardsFiltered,

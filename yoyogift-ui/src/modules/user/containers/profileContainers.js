@@ -4,14 +4,13 @@ import Profile from "../components/Profile";
 import { Redirect } from "react-router-dom";
 import { userDetails } from "../state/actions";
 
-class ProfileContainers extends Component {
+export class ProfileContainers extends Component {
   componentDidMount() {
     console.log(this.props.detailsObject);
     if (this.props.detailsObject)
       this.props.userDetails(this.props.detailsObject.id);
   }
   render() {
-    console.log();
     if (this.props.isLoggedIn) {
       return (
         <Profile
@@ -27,7 +26,7 @@ class ProfileContainers extends Component {
   }
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     isLoggedIn: state.login.loginStatus,
     detailsObject: state.login.detailsObject,

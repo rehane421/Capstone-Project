@@ -10,3 +10,168 @@ exports[`should render GiftsListContainer 1`] = `
   }
 />
 `;
+
+exports[`should render GiftsListContainer with giftCrds 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={0}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <label
+        style={
+          Object {
+            "marginLeft": "2%",
+          }
+        }
+      >
+        Filter by Retailer:
+      </label>
+      <WithStyles(ForwardRef(Select))
+        input={
+          <ForwardRef(WithStyles)
+            labelWidth={0}
+            name="kpiValue"
+          />
+        }
+        native={true}
+        onChange={[Function]}
+        style={
+          Object {
+            "height": "35px",
+            "marginLeft": "2%",
+            "marginTop": "2%",
+            "width": "100px",
+          }
+        }
+      >
+        <option
+          value="All"
+        >
+          All
+        </option>
+        <option
+          value="ashish"
+        >
+          ashish
+        </option>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <label
+        style={
+          Object {
+            "marginLeft": "2%",
+          }
+        }
+      >
+        Sort by:
+      </label>
+      <WithStyles(ForwardRef(Select))
+        input={
+          <ForwardRef(WithStyles)
+            labelWidth={0}
+            name="sortByValue"
+          />
+        }
+        native={true}
+        onChange={[Function]}
+        style={
+          Object {
+            "height": "35px",
+            "marginLeft": "2%",
+            "marginRight": "2%",
+            "marginTop": "2%",
+            "width": "100px",
+          }
+        }
+      >
+        <option
+          value="None"
+        >
+          None
+        </option>
+        <option
+          value="Points"
+        >
+          Points
+        </option>
+        <option
+          value="Count"
+        >
+          Count
+        </option>
+        <option
+          value="Validity"
+        >
+          Validity
+        </option>
+      </WithStyles(ForwardRef(Select))>
+      <WithStyles(ForwardRef(Tooltip))
+        title="Low to High"
+      >
+        <WithStyles(ForwardRef(IconButton))
+          disabled={true}
+        >
+          <pure(SwapVertIcon) />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      sm={3}
+      xs={12}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <WithStyles(GiftsList)
+      classes={
+        Object {
+          "root": "root",
+        }
+      }
+      fetchCardFilter={[MockFunction]}
+      fetchCards={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      giftCards={
+        Array [
+          Object {
+            "cardRetailer": "ashish",
+            "id": 1,
+          },
+        ]
+      }
+      userDetails={
+        Object {
+          "email": "",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;

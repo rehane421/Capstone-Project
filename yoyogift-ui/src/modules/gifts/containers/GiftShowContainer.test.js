@@ -8,7 +8,7 @@ let props = {
     cardPoints: 45
   },
   user: {
-    balancePoint: 43
+    balance_points: 43
   },
   login: {
     id: 1
@@ -24,6 +24,12 @@ let props = {
 it("should render GiftShowContainer", async () => {
   let wrapper = shallow(<GiftShowContainer {...props} />);
   await expect(shallowToJson(wrapper)).toMatchSnapshot();
+});
+
+//validateSend() mwthod
+it("should render GiftShowContainer", async () => {
+  // let wrapper = shallow(<GiftShowContainer {...props} />);
+  // console.log(shallowToJson(wrapper));
 });
 
 it("should map state to props", () => {

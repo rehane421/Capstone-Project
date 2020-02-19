@@ -9,14 +9,14 @@ export const Profile = props => {
     firstName,
     lastName,
     socialProfileLink,
-    picture,
+    image,
     balance_points
   } = props.detailsObject;
   return (
     <React.Fragment>
       <br />
       <br />
-      <div className="row">
+      {/* <div className="row">
         <div className="col-md-12">
           {" "}
           <label className="">
@@ -33,7 +33,7 @@ export const Profile = props => {
             <img
               className="img-fluid"
               alt="profile"
-              src={picture}
+              src={image}
               height="150"
               width="150"
             />
@@ -96,9 +96,9 @@ export const Profile = props => {
           </label>
         </div>
       </div>
-      <hr />
-      {/* <div className={Styles.profileHeader}>
-        <img className={Styles.profileImg} alt="profile" src={picture} />
+      <hr /> */}
+      <div className={Styles.profileHeader}>
+        <img className={Styles.profileImg} alt="profile" src={image} />
       </div>
       <div className={Styles.profileContent}>
         <Grid container spacing={0}>
@@ -125,7 +125,7 @@ export const Profile = props => {
             </Paper>
           </Grid>
         </Grid>
-      </div> */}
+      </div>
     </React.Fragment>
   );
 };

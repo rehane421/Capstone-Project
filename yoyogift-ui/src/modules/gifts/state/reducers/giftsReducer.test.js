@@ -47,21 +47,21 @@ describe("giftsReducer", () => {
   it("ADMIN_ADD_CARD", () => {
     const action = {
       type: "ADMIN_ADD_CARD",
-      payload: { data: { card } }
+      payload: { data: { id: 1 } }
     };
 
     const state = giftsReducer(card, action);
 
     expect(state).toEqual({
       ...state,
-      card
+      giftCards: action.payload
     });
   });
 
   it("ADMIN_UPDATE_CARD", () => {
     const action = {
       type: "ADMIN_UPDATE_CARD",
-      payload: { giftCards: { card } }
+      payload: { giftCards: [{ id: 1 }], data: { id: 1 } }
     };
 
     const state = giftsReducer(card, action);
