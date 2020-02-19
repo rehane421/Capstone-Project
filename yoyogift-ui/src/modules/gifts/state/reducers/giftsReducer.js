@@ -2,6 +2,7 @@ import {
   FETCH_CARDS,
   FETCH_CARD,
   FETCH_CARD_FILTER,
+  FETCH_CARD_SEARCH,
   UPDATE_CARD_COUNT,
   ADMIN_ADD_CARD,
   ADMIN_UPDATE_CARD
@@ -9,6 +10,7 @@ import {
 const INITIAL_STATE = {
   giftCards: [],
   giftCardsFiltered: [],
+  searchedCard: [],
   giftCard: {}
 };
 
@@ -21,12 +23,11 @@ const giftsReducer = (state = INITIAL_STATE, action) => {
     case FETCH_CARDS:
       state = {
         ...state,
-        giftCards: action.payload.data
+        giftCards: action.payload.data,
+        giftCardsFiltered: action.payload.data,
+        searchedCard: action.payload.data
       };
-      state = {
-        ...state,
-        giftCardsFiltered: action.payload.data
-      };
+
       break;
 
     case ADMIN_ADD_CARD:
@@ -47,13 +48,21 @@ const giftsReducer = (state = INITIAL_STATE, action) => {
       break;
 
     case FETCH_CARD_FILTER:
+      // state = {
+      //   ...state,
+      //   searchedCard: action.payload
+      // };
       state = {
         ...state,
-        giftCardsFiltered: []
+        giftCardsFiltered: action.payload,
+        searchedCard: action.payload
       };
+      break;
+
+    case FETCH_CARD_SEARCH:
       state = {
         ...state,
-        giftCardsFiltered: action.payload
+        searchedCard: action.payload
       };
       break;
 

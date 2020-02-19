@@ -3,17 +3,21 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import GiftsList from "../components/GiftsList";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Button from "@material-ui/core/Button";
-import { fetchCards, fetchCard, fetchCardFilter } from "../state/actions";
-import history from "../../common/components/history";
+import {
+  fetchCards,
+  fetchCard,
+  fetchCardFilter,
+  fetchCardSearch
+} from "../state/actions";
 import Select from "@material-ui/core/Select";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import AscendingButton from "@material-ui/icons/SwapVert";
 import IconButton from "@material-ui/core/IconButton";
 import DescendingButton from "@material-ui/icons/SwapVerticalCircle";
 import Tooltip from "@material-ui/core/Tooltip";
-import { adminEmail } from "../../../config/constants";
+// import { adminEmail } from "../../../config/constants";
 import Grid from "@material-ui/core/Grid";
+import { DebounceInput } from "react-debounce-input";
 
 import {
   comparePointsAsc,
@@ -84,6 +88,19 @@ export class GiftsListContainer extends React.Component {
       newGiftCard = this.props.giftCards;
     }
     this.props.fetchCardFilter(newGiftCard);
+  };
+
+  onSearchChange = e => {
+    // console.log(this.props.giftCardsFiltered);
+    let searchData = e.target.value;
+    let newSearchCard = this.props.giftCardsFiltered;
+    newSearchCard = newSearchCard.filter(function(card) {
+      return (
+        card.cardName.toLowerCase().search(searchData.toLowerCase()) !== -1
+      );
+    });
+    console.log(newSearchCard);
+    this.props.fetchCardSearch(newSearchCard);
   };
 
   onChangeSort = e => {
@@ -215,7 +232,7 @@ export class GiftsListContainer extends React.Component {
               </Tooltip>
             )}
           </Grid>
-          <Grid item xs={12} sm={3}>
+          {/* <Grid item xs={12} sm={3}>
             {adminEmail.includes(this.props.userDetails.email) ? (
               <Button
                 style={{ marginTop: "2%", marginRight: "3%", marginLeft: "2%" }}
@@ -226,10 +243,14 @@ export class GiftsListContainer extends React.Component {
                 ADD CARD
               </Button>
             ) : null}
-          </Grid>
-          {/* <Grid item xs={12} sm={3}>
-              search bar:<input name="SearchBar" />
           </Grid> */}
+          <Grid item xs={12} sm={3}>
+            <DebounceInput
+              minLength={2}
+              debounceTimeout={300}
+              onChange={this.onSearchChange}
+            />
+          </Grid>
         </Grid>
 
         <div style={{ textAlign: "center" }}>
@@ -248,6 +269,7 @@ export const mapStateToProps = state => {
   return {
     giftCards: state.gifts.giftCards,
     giftCardsFiltered: state.gifts.giftCardsFiltered,
+    searchedCard: state.gifts.searchedCard,
     userDetails: state.login.detailsObject
   };
 };
@@ -259,5 +281,6 @@ GiftsListContainer.propTypes = {
 export default connect(mapStateToProps, {
   fetchCards,
   fetchCard,
-  fetchCardFilter
+  fetchCardFilter,
+  fetchCardSearch
 })(GiftsListContainer);

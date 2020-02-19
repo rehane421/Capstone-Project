@@ -24,6 +24,7 @@
     "material-ui-search-bar": "^0.4.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
+    "react-debounce-input": "^3.2.2",
     "react-dom": "^16.8.6",
     "react-draggable": "^3.3.0",
     "react-facebook-login": "^4.1.1",
@@ -58,7 +59,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watchAll=false --coverage -u",
     "eject": "react-scripts eject",
-    "test-coverage": "react-scripts test --env=jsdom --coverage"
+    "test-coverage": "react-scripts test --env=jsdom --coverage",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": "react-app"

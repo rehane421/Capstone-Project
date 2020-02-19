@@ -4,7 +4,8 @@ import {
   FETCH_CARD_FILTER,
   ADMIN_ADD_CARD,
   UPDATE_CARD_COUNT,
-  ADMIN_UPDATE_CARD
+  ADMIN_UPDATE_CARD,
+  FETCH_CARD_SEARCH
 } from "./types";
 import axiosWrapper from "../../../../apis/axiosCreate";
 
@@ -35,6 +36,13 @@ export const adminUpdateCard = (id, object) => async dispatch => {
 export const fetchCardFilter = object => async dispatch => {
   dispatch({
     type: FETCH_CARD_FILTER,
+    payload: object
+  });
+};
+
+export const fetchCardSearch = object => async dispatch => {
+  dispatch({
+    type: FETCH_CARD_SEARCH,
     payload: object
   });
 };
