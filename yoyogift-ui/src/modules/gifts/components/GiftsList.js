@@ -30,7 +30,7 @@
 
 // export class GiftsList extends React.Component {
 //   state = {
-//     giftCardsFiltered: this.props.giftCardsFiltered,
+//     searchedCard: this.props.searchedCard,
 //     page: 0,
 //     rowsPerPage: 10
 //   };
@@ -151,27 +151,134 @@
 
 // export default withStyles(styles)(GiftsList);
 
+//Attempt 2
+
+// import React from "react";
+// import PropTypes from "prop-types";
+// import { withStyles } from "@material-ui/core/styles";
+// import Table from "@material-ui/core/Table";
+// import TableBody from "@material-ui/core/TableBody";
+// import TableCell from "@material-ui/core/TableCell";
+// import TableFooter from "@material-ui/core/TableFooter";
+// import TablePagination from "@material-ui/core/TablePagination";
+// import TableRow from "@material-ui/core/TableRow";
+// import Paper from "@material-ui/core/Paper";
+// import Grid from "@material-ui/core/Grid";
+// import { List } from "react-virtualized";
+// import { Button } from "@material-ui/core";
+// import GiftCard from "../../common/components/GiftCard";
+// import { TablePaginationActionsWrapped } from "../../common/components/TablePaginationActionsWrapped";
+
+// const styles = theme => ({
+//   root: {
+//     width: "90%",
+//     margin: "2%",
+//     padding: "1%"
+//   },
+//   table: {
+//     minWidth: 100
+//   },
+//   tableWrapper: {
+//     overflow: "hidden"
+//   }
+// });
+
+// class GiftsList extends React.Component {
+//   state = {
+//     giftCardsFiltered: this.props.giftCardsFiltered,
+//     searchedCard: this.props.searchedCard,
+//     page: 0,
+//     rowsPerPage: 10
+//   };
+
+//   handleChangePage = (event, page) => {
+//     this.setState({ page });
+//   };
+
+//   handleChangeRowsPerPage = event => {
+//     this.setState({ page: 0, rowsPerPage: event.target.value });
+//   };
+
+//   render() {
+//     let { classes, giftCardsFiltered, userDetails, searchedCard } = this.props;
+//     const { rowsPerPage, page } = this.state;
+//     const emptyRows =
+//       rowsPerPage -
+//       Math.min(rowsPerPage, searchedCard.length - page * rowsPerPage);
+//     return (
+//       <Paper className={classes.root}>
+//         <div className={classes.tableWrapper}>
+//           <Table className={classes.table}>
+//             <TableBody>
+//               <Grid container spacing={16}>
+//                 {searchedCard
+//                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+//                   .map(giftCard => {
+//                     return (
+//                       <Grid item xs={12} sm={6} md={3} lg={3}>
+//                         <GiftCard
+//                           giftCard={giftCard}
+//                           userEmail={userDetails.email}
+//                         />
+//                         {/* {(userDetails.email === "lathak95@gmail.com" || this.props.userDetails.email === "yoyogiftg2@gmail.com")? <Button variant="contained" color="primary" onClick={()=> this.props.handleUpdateClick(giftCard.id)}>UPDATE</Button> : null} */}
+//                       </Grid>
+//                     );
+//                   })}
+//               </Grid>
+//               {emptyRows > 0 && (
+//                 <TableRow style={{ height: 48 * emptyRows }}>
+//                   <TableCell colSpan={6} />
+//                 </TableRow>
+//               )}
+//             </TableBody>
+//             <TableFooter>
+//               <TableRow>
+//                 <TablePagination
+//                   rowsPerPageOptions={[10, 20]}
+//                   colSpan={3}
+//                   count={giftCardsFiltered.length}
+//                   rowsPerPage={rowsPerPage}
+//                   page={page}
+//                   SelectProps={{
+//                     native: true
+//                   }}
+//                   onChangePage={this.handleChangePage}
+//                   onChangeRowsPerPage={this.handleChangeRowsPerPage}
+//                   ActionsComponent={TablePaginationActionsWrapped}
+//                   props
+//                 />
+//               </TableRow>
+//             </TableFooter>
+//           </Table>
+//         </div>
+//       </Paper>
+//     );
+//   }
+// }
+
+// GiftsList.propTypes = {
+//   classes: PropTypes.object.isRequired
+// };
+
+// export default withStyles(styles)(GiftsList);
+
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableFooter from "@material-ui/core/TableFooter";
-import TablePagination from "@material-ui/core/TablePagination";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { List } from "react-virtualized";
-import { Button } from "@material-ui/core";
 import GiftCard from "../../common/components/GiftCard";
-import { TablePaginationActionsWrapped } from "../../common/components/TablePaginationActionsWrapped";
-
+import { List, AutoSizer } from "react-virtualized";
+import { Button } from "@material-ui/core";
 const styles = theme => ({
   root: {
-    width: "90%",
-    margin: "2%",
-    padding: "1%"
+    width: "20%",
+    margin: "1%",
+    padding: "1%",
+    float: "left",
+    [theme.breakpoints.down("xs")]: {
+      padding: "7%",
+      width: "80%"
+    }
   },
   table: {
     minWidth: 100
@@ -183,73 +290,63 @@ const styles = theme => ({
 
 class GiftsList extends React.Component {
   state = {
-    giftCardsFiltered: this.props.giftCardsFiltered,
-    searchedCard: this.props.searchedCard,
-    page: 0,
-    rowsPerPage: 10
+    searchedCard: this.props.searchedCard
   };
-
-  handleChangePage = (event, page) => {
-    this.setState({ page });
-  };
-
-  handleChangeRowsPerPage = event => {
-    this.setState({ page: 0, rowsPerPage: event.target.value });
-  };
-
   render() {
-    let { classes, giftCardsFiltered, userDetails, searchedCard } = this.props;
-    const { rowsPerPage, page } = this.state;
-    const emptyRows =
-      rowsPerPage -
-      Math.min(rowsPerPage, searchedCard.length - page * rowsPerPage);
+    let { searchedCard, userDetails, classes } = this.props;
+
     return (
-      <Paper className={classes.root}>
-        <div className={classes.tableWrapper}>
-          <Table className={classes.table}>
-            <TableBody>
-              <Grid container spacing={16}>
-                {searchedCard
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map(giftCard => {
-                    return (
-                      <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <GiftCard
-                          giftCard={giftCard}
-                          userEmail={userDetails.email}
-                        />
-                        {/* {(userDetails.email === "lathak95@gmail.com" || this.props.userDetails.email === "yoyogiftg2@gmail.com")? <Button variant="contained" color="primary" onClick={()=> this.props.handleUpdateClick(giftCard.id)}>UPDATE</Button> : null} */}
-                      </Grid>
+      // <div alignItems= 'center'>
+      //   <List
+      //   width={1000}
+      //   height={600}
+      //   rowHeight={315}
+      //   rowRenderer={this.rowRenderer}
+      //   rowCount={searchedCard.length} />
+      // </div>
+      <div style={{ marginTop: "10px", height: "80vh" }}>
+        <AutoSizer>
+          {({ height, width }) => {
+            const itemsPerRow = Math.floor(width / 300) || 1;
+            const rowCount = Math.ceil(searchedCard.length / itemsPerRow);
+            return (
+              <div>
+                <List
+                  width={width}
+                  height={height}
+                  rowCount={rowCount}
+                  rowHeight={340}
+                  rowRenderer={({ index, key, style }) => {
+                    const items = [];
+                    const fromIndex = index * itemsPerRow;
+                    const toIndex = Math.min(
+                      fromIndex + itemsPerRow,
+                      searchedCard.length
                     );
-                  })}
-              </Grid>
-              {emptyRows > 0 && (
-                <TableRow style={{ height: 48 * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-            <TableFooter>
-              <TableRow>
-                <TablePagination
-                  rowsPerPageOptions={[10, 20]}
-                  colSpan={3}
-                  count={giftCardsFiltered.length}
-                  rowsPerPage={rowsPerPage}
-                  page={page}
-                  SelectProps={{
-                    native: true
+
+                    for (let i = fromIndex; i < toIndex; i++) {
+                      items.push(
+                        <div className={classes.root} key={i}>
+                          <GiftCard
+                            giftCard={searchedCard[i]}
+                            userEmail={userDetails.email}
+                          />
+                        </div>
+                      );
+                    }
+
+                    return (
+                      <div className={classes.item} key={key} style={style}>
+                        {items}
+                      </div>
+                    );
                   }}
-                  onChangePage={this.handleChangePage}
-                  onChangeRowsPerPage={this.handleChangeRowsPerPage}
-                  ActionsComponent={TablePaginationActionsWrapped}
-                  props
                 />
-              </TableRow>
-            </TableFooter>
-          </Table>
-        </div>
-      </Paper>
+              </div>
+            );
+          }}
+        </AutoSizer>
+      </div>
     );
   }
 }

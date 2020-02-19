@@ -2,6 +2,16 @@ import { LOGIN, LOGOUT } from "./types";
 import axiosWrapper from "../../../../apis/axiosCreate";
 import history from "../../../common/components/history";
 
+//logging
+import log from "loglevel";
+import remote from "loglevel-plugin-remote";
+
+const customJSON = log => ({
+  msg: log.message,
+  level: log.level.label,
+  stacktrace: log.stacktrace
+});
+
 export const login = object => async dispatch => {
   if (object.tokenObj && object.tokenObj.access_token) {
     const { profileObj } = object;
@@ -28,19 +38,30 @@ export const login = object => async dispatch => {
       const response = await axiosWrapper.get(
         `/users?email=${email}&last_name=${password}`
       );
+
+      remote.apply(log, {
+        format: customJSON,
+        url: "http://localhost:5000/users"
+      });
+      log.enableAll();
+
       if (response.data.length > 0) {
         dispatch({
           type: LOGIN,
           payload: response.data[0]
         });
+        log.info(`user [${email}] is logged in at [${new Date()}]`);
         window.localStorage.setItem("user", JSON.stringify(response.data[0]));
         history.push("/");
+      } else {
+        log.error("else error");
       }
     } catch {
-      console.error("catch error");
+      // console.error("error");
+      log.error("Server error");
     }
   } else {
-    console.error("user not found");
+    log.error("User not found");
   }
 };
 

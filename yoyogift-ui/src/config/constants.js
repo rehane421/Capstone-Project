@@ -1,4 +1,4 @@
-export const apiURL = "http://localhost:5000";
+export const apiURL = "https://apiyoyo.herokuapp.com";
 export const adminEmail = ["yoyogiftg2@gmail.com"];
 export const google = {
   loginClientId:

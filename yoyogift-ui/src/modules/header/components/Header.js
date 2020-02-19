@@ -33,6 +33,9 @@ export class Header extends Component {
       showErrorSnack: false
     };
   }
+  static contextTypes = {
+    logger: PropTypes.func
+  };
   render() {
     const { showErrorSnack } = this.state;
     const { classes, isLoggedIn } = this.props;

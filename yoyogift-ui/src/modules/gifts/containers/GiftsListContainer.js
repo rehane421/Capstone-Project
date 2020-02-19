@@ -18,7 +18,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // import { adminEmail } from "../../../config/constants";
 import Grid from "@material-ui/core/Grid";
 import { DebounceInput } from "react-debounce-input";
-
+import * as _ from "underscore";
 import {
   comparePointsAsc,
   comparePointsDesc,
@@ -38,6 +38,7 @@ export class GiftsListContainer extends React.Component {
       sortByValue: "None",
       filterValue: "All"
     };
+    this.handleInputThrottled = _.throttle(this.onSearchChange, 1000);
   }
   componentDidMount() {
     this.props.fetchCards();
@@ -91,7 +92,7 @@ export class GiftsListContainer extends React.Component {
   };
 
   onSearchChange = e => {
-    // console.log(this.props.giftCardsFiltered);
+    console.log("called");
     let searchData = e.target.value;
     let newSearchCard = this.props.giftCardsFiltered;
     newSearchCard = newSearchCard.filter(function(card) {
@@ -245,10 +246,11 @@ export class GiftsListContainer extends React.Component {
             ) : null}
           </Grid> */}
           <Grid item xs={12} sm={3}>
+            <span>Search</span>
             <DebounceInput
               minLength={2}
               debounceTimeout={300}
-              onChange={this.onSearchChange}
+              onChange={this.handleInputThrottled}
             />
           </Grid>
         </Grid>

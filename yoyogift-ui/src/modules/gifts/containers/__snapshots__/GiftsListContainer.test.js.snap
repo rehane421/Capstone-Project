@@ -129,7 +129,20 @@ exports[`should render GiftsListContainer with giftCrds 1`] = `
       item={true}
       sm={3}
       xs={12}
-    />
+    >
+      <span>
+        Search
+      </span>
+      <DebounceInput
+        debounceTimeout={300}
+        element="input"
+        forceNotifyByEnter={true}
+        forceNotifyOnBlur={true}
+        minLength={2}
+        onChange={[Function]}
+        type="text"
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
   <div
     style={
