@@ -64,15 +64,20 @@ it("USER_DETAILS", () => {
 it("REDEEM_CARD", () => {
   const action = {
     type: "REDEEM_CARD",
-    payload: cards
+    payload: {
+      id: "1"
+    }
   };
-
-  const state = usersReducer(cards, action);
-
+  const state = usersReducer(
+    { cards: [{ id: "1", isRedeemed: true }] },
+    action
+  );
   expect(state).toEqual({
-    ...state,
-    cards
+    card: [{ id: "1", isRedeemed: true }],
+    cards: [{ id: "1" }]
   });
+  const card = usersReducer({ cards: [{ id: "2" }] }, action);
+  expect(card).toEqual({ card: [{ id: "2" }], cards: [{ id: "2" }] });
 });
 
 it("UPDATE_BALANCE", () => {

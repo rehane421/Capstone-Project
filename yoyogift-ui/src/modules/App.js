@@ -32,47 +32,47 @@ export function Loading({ error }) {
   }
 }
 
-const GiftsListContainer = Loadable({
+export const GiftsListContainer = Loadable({
   loader: () => import("./gifts/containers/GiftsListContainer"),
   loading: Loading
 });
 
-const ProfileContainers = Loadable({
+export const ProfileContainers = Loadable({
   loader: () => import("./user/containers/ProfileContainers"),
   loading: Loading
 });
 
-const GiftShowContainer = Loadable({
+export const GiftShowContainer = Loadable({
   loader: () => import("./gifts/containers/GiftShowContainer"),
   loading: Loading
 });
 
-const GiftsSendContainer = Loadable({
+export const GiftsSendContainer = Loadable({
   loader: () => import("./user/containers/GiftsSendContainer"),
   loading: Loading
 });
 
-const GiftsReceivedContainer = Loadable({
+export const GiftsReceivedContainer = Loadable({
   loader: () => import("./user/containers/GiftsReceivedContainer"),
   loading: Loading
 });
 
-// const GiftCreateContainer = Loadable({
+// export const GiftCreateContainer = Loadable({
 //   loader: () => import("./gifts/containers/GiftCreateContainer"),
 //   loading: Loading
 // });
 
-const AddUpdateForm = Loadable({
+export const AddUpdateForm = Loadable({
   loader: () => import("./admin/components/AddUpdateForm"),
   loading: Loading
 });
 
-const ErrorPage = Loadable({
+export const ErrorPage = Loadable({
   loader: () => import("./common/components/ErrorPage"),
   loading: Loading
 });
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <LocalizeProvider>

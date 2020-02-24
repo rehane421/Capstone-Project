@@ -8,7 +8,8 @@ describe("GiftShow", () => {
 
   props = {
     data: {
-      cardImage: ""
+      cardImage: "Zomato",
+      cardPoints: 139
     },
     getEmail: jest.fn()
   };
@@ -16,4 +17,5 @@ describe("GiftShow", () => {
     wrapper = shallow(<GiftShow {...props} />);
   });
   expect(shallowToJson(wrapper)).toMatchSnapshot();
+  console.log(shallowToJson(wrapper));
 });

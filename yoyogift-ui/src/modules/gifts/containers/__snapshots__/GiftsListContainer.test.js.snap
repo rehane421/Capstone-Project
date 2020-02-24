@@ -15,7 +15,7 @@ exports[`should render GiftsListContainer with giftCrds 1`] = `
 <Fragment>
   <WithStyles(ForwardRef(Grid))
     container={true}
-    spacing={0}
+    spacing={1}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -134,12 +134,19 @@ exports[`should render GiftsListContainer with giftCrds 1`] = `
         Search
       </span>
       <DebounceInput
-        debounceTimeout={300}
+        debounceTimeout={500}
         element="input"
         forceNotifyByEnter={true}
         forceNotifyOnBlur={true}
         minLength={2}
         onChange={[Function]}
+        style={
+          Object {
+            "borderRadius": "5px",
+            "height": "25px",
+            "marginTop": "10px",
+          }
+        }
         type="text"
       />
     </WithStyles(ForwardRef(Grid))>

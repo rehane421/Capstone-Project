@@ -110,3 +110,17 @@ exports[`should render Loading 2`] = `
   color="secondary"
 />
 `;
+
+exports[`should render correctly AddUpdateForm 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly ErrorPage 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly GiftShowContainer 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly GiftsListContainer 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly GiftsReceivedContainer 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly GiftsSendContainer 1`] = `ShallowWrapper {}`;
+
+exports[`should render correctly ProfileContainers 1`] = `ShallowWrapper {}`;

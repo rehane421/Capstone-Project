@@ -12,7 +12,8 @@ describe("giftsReducer", () => {
     expect(state).toEqual({
       giftCards: [],
       giftCardsFiltered: [],
-      giftCard: {}
+      giftCard: {},
+      searchedCard: []
     });
   });
 
@@ -47,21 +48,7 @@ describe("giftsReducer", () => {
   it("ADMIN_ADD_CARD", () => {
     const action = {
       type: "ADMIN_ADD_CARD",
-      payload: { data: { id: 1 } }
-    };
-
-    const state = giftsReducer(card, action);
-
-    expect(state).toEqual({
-      ...state,
-      giftCards: action.payload
-    });
-  });
-
-  it("ADMIN_UPDATE_CARD", () => {
-    const action = {
-      type: "ADMIN_UPDATE_CARD",
-      payload: { giftCards: [{ id: 1 }], data: { id: 1 } }
+      payload: { data: { card } }
     };
 
     const state = giftsReducer(card, action);
@@ -72,9 +59,40 @@ describe("giftsReducer", () => {
     });
   });
 
+  it("ADMIN_UPDATE_CARD", () => {
+    const action = {
+      type: "ADMIN_UPDATE_CARD",
+      payload: { data: { id: "1" } }
+    };
+
+    const state = giftsReducer({ giftCards: [{ id: "1" }] }, action);
+    expect(state).toEqual({
+      ...state,
+      card
+    });
+    const cards = giftsReducer({ giftCards: [{ id: "2" }] }, action);
+    expect(cards).toEqual({
+      giftCards: [{ id: "2" }]
+    });
+  });
+
   it("FETCH_CARD_FILTER", () => {
     const action = {
       type: "FETCH_CARD_FILTER",
+      payload: { data: { card } }
+    };
+
+    const state = giftsReducer(card, action);
+
+    expect(state).toEqual({
+      ...state,
+      card
+    });
+  });
+
+  it("FETCH_CARD_SEARCH", () => {
+    const action = {
+      type: "FETCH_CARD_SEARCH",
       payload: { data: { card } }
     };
 

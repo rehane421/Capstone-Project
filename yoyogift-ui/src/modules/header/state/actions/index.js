@@ -1,6 +1,7 @@
 import { LOGIN, LOGOUT } from "./types";
 import axiosWrapper from "../../../../apis/axiosCreate";
 import history from "../../../common/components/history";
+import { apiURL } from "../../../../config/constants";
 
 //logging
 import log from "loglevel";
@@ -41,7 +42,7 @@ export const login = object => async dispatch => {
 
       remote.apply(log, {
         format: customJSON,
-        url: "http://localhost:5000/users"
+        url: { apiURL }
       });
       log.enableAll();
 

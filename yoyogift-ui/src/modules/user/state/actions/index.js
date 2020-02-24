@@ -21,7 +21,6 @@ export const fetchSentCards = email => async dispatch => {
 
 export const userDetails = id => async dispatch => {
   const response = await axiosWrapper.get(`/users/${id}`);
-  console.log(response);
   dispatch({
     type: USER_DETAILS,
     payload: response.data
@@ -42,12 +41,12 @@ export const updateUserBalance = (id, newBalance) => async () => {
   await axiosWrapper
     .patch(`/users/${id}`, { balance_points: newBalance })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
     });
 };
 
 export const updateTransact = TransactObj => async () => {
   await axiosWrapper.post("/giftTransact", TransactObj).catch(err => {
-    console.log(err);
+    // console.log(err);
   });
 };

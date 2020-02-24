@@ -34,7 +34,6 @@ export class GiftShowContainer extends Component {
         .catch(err => {
           // Handles any error that occurred in any of the previous
           // promises in the chain.
-          console.log(err);
         });
     }
   }
@@ -72,7 +71,6 @@ export class GiftShowContainer extends Component {
             .updateCardCount(this.props.gift.id, this.props.gift.cardCount - 1)
             .then(() => {
               this.sendMail(this.state.email, this.props.login.email);
-              console.log(this.props.login);
               this.setState({
                 showSuccessSnackBar: true
               });
@@ -111,10 +109,10 @@ export class GiftShowContainer extends Component {
       .send(service_id, template_id, payload, "user_PpATvNmFAn9KTbfZPyCC6")
       .then(
         function(response) {
-          console.log("SUCCESS!", response.status, response.text);
+          // console.log("SUCCESS!", response.status, response.text);
         },
         function(error) {
-          console.log("FAILED...", error);
+          // console.log("FAILED...", error);
         }
       );
   };

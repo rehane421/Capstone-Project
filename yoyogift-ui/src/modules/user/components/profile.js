@@ -6,8 +6,8 @@ import Paper from "@material-ui/core/Paper";
 export const Profile = props => {
   let {
     email,
-    firstName,
-    lastName,
+    first_name,
+    last_name,
     socialProfileLink,
     image,
     balance_points
@@ -103,26 +103,23 @@ export const Profile = props => {
       <div className={Styles.profileContent}>
         <Grid container spacing={0}>
           <Grid item xs={4}>
-            <label className={Styles.label}>Name</label>
-            <label className={Styles.label}>User Id</label>
+            <label className={Styles.label}>
+              Name: {first_name} {last_name}
+            </label>
+            <label className={Styles.label}>User Id: {email}</label>
             {socialProfileLink ? (
               <label className={Styles.label}>Social Profile Contact</label>
             ) : null}
-            <label className={Styles.label}>Balance Points</label>
+            <label className={Styles.label}>
+              Balance Points: {balance_points}
+            </label>
           </Grid>
           <Grid item xs={8}>
-            <Paper className={Styles.profileValues}>
-              {firstName} {lastName}
-            </Paper>
-            <Paper className={Styles.profileValues}>{email}</Paper>
             {socialProfileLink ? (
               <Paper className={Styles.profileValues}>
                 {socialProfileLink}
               </Paper>
             ) : null}
-            <Paper className={Styles.profileValues}>
-              {balance_points} Points
-            </Paper>
           </Grid>
         </Grid>
       </div>

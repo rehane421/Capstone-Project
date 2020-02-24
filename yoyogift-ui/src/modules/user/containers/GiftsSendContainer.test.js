@@ -6,7 +6,10 @@ import { GiftsSendContainer, mapStateToProps } from "./GiftsSendContainer";
 let wrapper;
 let props1 = {
   isLoggedIn: true,
-  user: {}
+  user: {
+    email: "johndoe@gmail.com"
+  },
+  fetchSentCards: jest.fn()
 };
 let props2 = {
   isLoggedIn: false

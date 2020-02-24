@@ -18,7 +18,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // import { adminEmail } from "../../../config/constants";
 import Grid from "@material-ui/core/Grid";
 import { DebounceInput } from "react-debounce-input";
-import * as _ from "underscore";
+// import * as _ from "underscore";
 import {
   comparePointsAsc,
   comparePointsDesc,
@@ -29,7 +29,7 @@ import {
 } from "../../common/components/CompareForSort";
 
 const sortCategoryArray = ["Points", "Count", "Validity"];
-export class GiftsListContainer extends React.Component {
+export class GiftsListContainer extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +38,7 @@ export class GiftsListContainer extends React.Component {
       sortByValue: "None",
       filterValue: "All"
     };
-    this.handleInputThrottled = _.throttle(this.onSearchChange, 1000);
+    // this.handleInputThrottled = _.throttle(this.onSearchChange, 1000);
   }
   componentDidMount() {
     this.props.fetchCards();
@@ -92,7 +92,7 @@ export class GiftsListContainer extends React.Component {
   };
 
   onSearchChange = e => {
-    console.log("called");
+    console.log("on search");
     let searchData = e.target.value;
     let newSearchCard = this.props.giftCardsFiltered;
     newSearchCard = newSearchCard.filter(function(card) {
@@ -100,7 +100,6 @@ export class GiftsListContainer extends React.Component {
         card.cardName.toLowerCase().search(searchData.toLowerCase()) !== -1
       );
     });
-    console.log(newSearchCard);
     this.props.fetchCardSearch(newSearchCard);
   };
 
@@ -165,7 +164,7 @@ export class GiftsListContainer extends React.Component {
             })
           }
         </select> */}
-        <Grid container spacing={0}>
+        <Grid container spacing={1}>
           <Grid item xs={12} sm={3}>
             <label style={{ marginLeft: "2%" }}>Filter by Retailer:</label>
             <Select
@@ -248,9 +247,10 @@ export class GiftsListContainer extends React.Component {
           <Grid item xs={12} sm={3}>
             <span>Search</span>
             <DebounceInput
+              style={{ borderRadius: "5px", height: "25px", marginTop: "10px" }}
               minLength={2}
-              debounceTimeout={300}
-              onChange={this.handleInputThrottled}
+              debounceTimeout={500}
+              onChange={this.onSearchChange}
             />
           </Grid>
         </Grid>

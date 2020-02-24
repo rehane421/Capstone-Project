@@ -6,7 +6,6 @@ import { userDetails } from "../state/actions";
 
 export class ProfileContainers extends Component {
   componentDidMount() {
-    console.log(this.props.detailsObject);
     if (this.props.detailsObject)
       this.props.userDetails(this.props.detailsObject.id);
   }

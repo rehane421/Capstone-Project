@@ -28,7 +28,7 @@ exports[`should render Login 1`] = `
         <WithStyles(ForwardRef(Avatar))
           className="makeStyles-avatar-2"
         >
-          <pure(LockOutlinedIcon) />
+          <pure(PermIdentityTwoToneIcon) />
         </WithStyles(ForwardRef(Avatar))>
         <WithStyles(ForwardRef(Typography))
           component="h1"
@@ -64,15 +64,6 @@ exports[`should render Login 1`] = `
             type="password"
             variant="outlined"
           />
-          <WithStyles(ForwardRef(FormControlLabel))
-            control={
-              <ForwardRef(WithStyles)
-                color="primary"
-                value="remember"
-              />
-            }
-            label="Remember me"
-          />
           <WithStyles(ForwardRef(Button))
             className="makeStyles-submit-4"
             color="primary"
@@ -86,7 +77,7 @@ exports[`should render Login 1`] = `
           </WithStyles(ForwardRef(Button))>
           <u
             accessType="online"
-            buttonText="Login with Google"
+            buttonText="Continue with Google"
             className="makeStyles-submit-4"
             clientId="516303551815-8d25h2dq373oq3i92k8hvjnh9tfcbgar.apps.googleusercontent.com"
             cookiePolicy="single_host_origin"
@@ -109,31 +100,6 @@ exports[`should render Login 1`] = `
             type="button"
             uxMode="popup"
           />
-          <WithStyles(ForwardRef(Grid))
-            container={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            >
-              <WithStyles(ForwardRef(Link))
-                href="#"
-                variant="body2"
-              >
-                Forgot password?
-              </WithStyles(ForwardRef(Link))>
-            </WithStyles(ForwardRef(Grid))>
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-            >
-              <WithStyles(ForwardRef(Link))
-                href="#"
-                variant="body2"
-              >
-                Don't have an account? Sign Up
-              </WithStyles(ForwardRef(Link))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
         </form>
       </div>
       <Styled(MuiBox)

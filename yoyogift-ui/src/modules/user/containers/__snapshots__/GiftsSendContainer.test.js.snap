@@ -1,13 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render GiftsSendContainer component 1`] = `
+<WithStyles(ForwardRef(CircularProgress))
+  style={
+    Object {
+      "marginLeft": "50%",
+      "marginTop": "10%",
+    }
+  }
+/>
+`;
+
+exports[`should render GiftsSendContainer component 2`] = `
 <Redirect
   push={false}
   to="/"
 />
 `;
 
-exports[`should render GiftsSendContainer component 2`] = `
+exports[`should render GiftsSendContainer component 3`] = `
 <h2
   style={
     Object {
@@ -26,25 +37,11 @@ exports[`should render GiftsSendContainer component 2`] = `
 </h2>
 `;
 
-exports[`should render GiftsSendContainer component 3`] = `
+exports[`should render GiftsSendContainer component 4`] = `
 <Redirect
   push={false}
   to="/"
 />
-`;
-
-exports[`should render GiftsSendContainer component 4`] = `
-<div>
-  <WithStyles(GiftsSend)
-    data={
-      Array [
-        Object {
-          "id": 1,
-        },
-      ]
-    }
-  />
-</div>
 `;
 
 exports[`should render GiftsSendContainer component 5`] = `
