@@ -16,93 +16,13 @@ export const Profile = props => {
     <React.Fragment>
       <br />
       <br />
-      {/* <div className="row">
-        <div className="col-md-12">
-          {" "}
-          <label className="">
-            <h1>Your Profile</h1>{" "}
-          </label>
-        </div>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-md-12">
-          {" "}
-          <label className="">
-            {" "}
-            <img
-              className="img-fluid"
-              alt="profile"
-              src={image}
-              height="150"
-              width="150"
-            />
-          </label>
-        </div>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-md-4">
-          {" "}
-          <label className="">Name</label>
-        </div>
-        <div className="col-md-8">
-          {" "}
-          <label className="">
-            {" "}
-            {firstName} {lastName}
-          </label>
-        </div>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-md-4">
-          {" "}
-          <label className="">Email </label>
-        </div>
-        <div className="col-md-8">
-          {" "}
-          <label className="">{email} </label>
-        </div>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-md-4">
-          {" "}
-          <label className="">Gender </label>
-        </div>
-        <div className="col-md-8">
-          {" "}
-          <label className="">gender </label>
-        </div>
-      </div>
-      <hr />
-      <div className="row">
-        <div className="col-md-4">
-          {" "}
-          <label className="">Social Link </label>
-        </div>
-        <div className="col-md-8">
-          {" "}
-          <label className="">
-            {" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={socialProfileLink}
-            >
-              {socialProfileLink}
-            </a>
-          </label>
-        </div>
-      </div>
-      <hr /> */}
+
       <div className={Styles.profileHeader}>
         <img className={Styles.profileImg} alt="profile" src={image} />
       </div>
       <div className={Styles.profileContent}>
         <Grid container spacing={0}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={6}>
             <label className={Styles.label}>
               Name: {first_name} {last_name}
             </label>

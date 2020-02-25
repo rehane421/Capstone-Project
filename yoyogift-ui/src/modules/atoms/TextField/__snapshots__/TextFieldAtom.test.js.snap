@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TextFieldAtom component 1`] = `
+<div>
+  <WithStyles(ForwardRef(TextField))
+    autoFocus={true}
+    fullWidth={true}
+    margin="normal"
+    required={true}
+    variant="outlined"
+  />
+</div>
+`;

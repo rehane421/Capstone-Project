@@ -9,7 +9,8 @@ describe("Profile", () => {
   props = {
     // email: ""
     detailsObject: {
-      email: ""
+      email: "",
+      socialProfileLink: "facebookProfile"
     },
     data: [],
     classes: {
@@ -20,4 +21,5 @@ describe("Profile", () => {
     wrapper = shallow(<Profile {...props} />);
   });
   expect(shallowToJson(wrapper)).toMatchSnapshot();
+  console.log(shallowToJson(wrapper));
 });

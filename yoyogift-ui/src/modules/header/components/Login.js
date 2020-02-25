@@ -4,7 +4,8 @@ import { GoogleLogin } from "react-google-login";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
+// import TextField from "@material-ui/core/TextField";
+import TextFieldAtom from "../../atoms/TextField/TextFieldAtom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import PermIdentityTwoToneIcon from "@material-ui/icons/PermIdentityTwoTone";
@@ -72,7 +73,7 @@ export function Login({ login }) {
               Sign in
             </Typography>
             <form className={classes.form} noValidate>
-              <TextField
+              <TextFieldAtom
                 variant="outlined"
                 margin="normal"
                 required
@@ -85,8 +86,9 @@ export function Login({ login }) {
                 onChange={e => {
                   setEmail(e.target.value);
                 }}
+                setEmail={setEmail}
               />
-              <TextField
+              <TextFieldAtom
                 variant="outlined"
                 margin="normal"
                 required
@@ -99,6 +101,7 @@ export function Login({ login }) {
                 onChange={e => {
                   setPassword(e.target.value);
                 }}
+                setPassword={setPassword}
               />
               {/* <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}

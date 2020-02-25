@@ -40,7 +40,7 @@ exports[`should render Login 1`] = `
           className="makeStyles-form-3"
           noValidate={true}
         >
-          <WithStyles(ForwardRef(TextField))
+          <TextFieldAtom
             autoComplete="email"
             autoFocus={true}
             fullWidth={true}
@@ -50,9 +50,10 @@ exports[`should render Login 1`] = `
             name="email"
             onChange={[Function]}
             required={true}
+            setEmail={[Function]}
             variant="outlined"
           />
-          <WithStyles(ForwardRef(TextField))
+          <TextFieldAtom
             autoComplete="current-password"
             fullWidth={true}
             id="password"
@@ -61,6 +62,7 @@ exports[`should render Login 1`] = `
             name="password"
             onChange={[Function]}
             required={true}
+            setPassword={[Function]}
             type="password"
             variant="outlined"
           />

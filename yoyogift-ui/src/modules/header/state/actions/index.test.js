@@ -6,9 +6,6 @@ import { LOGIN } from "./types";
 const userDetail = { userDetails };
 
 it("google login", async () => {
-  // axiosWrapper.get = jest
-  //     .fn()
-  //     .mockImplementation(() => Promise.resolve({ data: "test"}));
   const dispatch = jest.fn().mockImplementation(args => {});
   const returnedFunction = login({
     tokenObj: { access_token: "test Token" },
