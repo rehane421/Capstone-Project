@@ -33,8 +33,7 @@ export class GiftsListContainer extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      //sortOrder : true (ascending order) and false (descending order)
-      sortOrder: true,
+      sortOrder: true, //true - ascending order
       sortByValue: "None",
       filterValue: "All"
     };
@@ -43,35 +42,16 @@ export class GiftsListContainer extends React.PureComponent {
   componentDidMount() {
     this.props.fetchCards();
   }
-  // componentDidCatch(error, info) {
-  //   console.log(error);
-  // }
-  // handleChangePage = (event, page) => {
-  //   this.setState({ page });
-  // };
 
-  // handleChangeRowsPerPage = event => {
-  //   this.setState({ page: 0, rowsPerPage: event.target.value });
-  // };
-
-  // handleSortButtonClick = () => {
-  //   const e = {
-  //     target: {
-  //       value: this.state.sortByValue
-  //     }
-  //   };
-  //   this.onChangeSort(e);
-  //   this.setState({ sortOrder: !this.state.sortOrder });
-  // };
-
-  // handleClickCard = (id) => {
-  //   this.props.fetchCard(id);
-  // }
-
-  // handleUpdateClick = (id) => {
-  //   console.log("container id", id);
-  //   history.push('/AddUpdateForm/' + id)
-  // }
+  handleSortButtonClick = () => {
+    const e = {
+      target: {
+        value: this.state.sortByValue
+      }
+    };
+    this.onChangeSort(e);
+    this.setState({ sortOrder: !this.state.sortOrder });
+  };
 
   onChangeRetailer = e => {
     const selectedValue = e.target.value;
@@ -154,16 +134,6 @@ export class GiftsListContainer extends React.PureComponent {
     let uniqueCardRetailerArray = [...new Set(cardRetailerArray)];
     return (
       <React.Fragment>
-        {/* <select onChange={this.onChangeRetailer}>
-          <option value="All">All</option>
-          {
-            uniqueCardRetailerArray.map((option) => {
-              return(
-                <option value={option}>{option}</option>
-              )
-            })
-          }
-        </select> */}
         <Grid container spacing={1}>
           <Grid item xs={12} sm={3}>
             <label style={{ marginLeft: "2%" }}>Filter by Retailer:</label>

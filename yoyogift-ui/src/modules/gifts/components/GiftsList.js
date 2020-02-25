@@ -9,6 +9,10 @@ const styles = theme => ({
     margin: "1%",
     padding: "1%",
     float: "left",
+    [theme.breakpoints.down("sm")]: {
+      // padding: "7%",
+      width: "30%"
+    },
     [theme.breakpoints.down("xs")]: {
       padding: "7%",
       width: "80%"

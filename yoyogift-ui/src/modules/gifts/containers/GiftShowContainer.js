@@ -38,10 +38,6 @@ export class GiftShowContainer extends Component {
     }
   }
 
-  // componentDidCatch(error, info) {
-  //   console.log(error);
-  // }
-
   validateSend = async sendTo => {
     if (
       this.state.cardPoints &&

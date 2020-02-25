@@ -4,7 +4,6 @@ import { GoogleLogin } from "react-google-login";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-// import TextField from "@material-ui/core/TextField";
 import TextFieldAtom from "../../atoms/TextField/TextFieldAtom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
@@ -26,7 +25,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#12AE96"
   },
   form: {
-    // width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(1)
   },
   submit: {

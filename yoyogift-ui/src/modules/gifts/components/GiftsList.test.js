@@ -44,18 +44,8 @@ describe("GiftsList", () => {
   });
 
   //rowRenderer
-  it("should render rowRenderer function", () => {
+  it("should call rowRenderer function", () => {
     wrapper = shallow(<GiftsList {...props2} />);
-    // console.log(
-    //   wrapper
-    //     .instance()
-    //     .autoSizer("height", "width")
-    //     .props.children.props.rowRenderer(
-    //       props2.key,
-    //       props2.index,
-    //       props2.style
-    //     )
-    // );
     console.log(shallowToJson(wrapper).children[0]);
   });
 });

@@ -48,10 +48,6 @@ const giftsReducer = (state = INITIAL_STATE, action) => {
       break;
 
     case FETCH_CARD_FILTER:
-      // state = {
-      //   ...state,
-      //   searchedCard: action.payload
-      // };
       state = {
         ...state,
         giftCardsFiltered: action.payload,

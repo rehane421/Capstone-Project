@@ -57,11 +57,6 @@ export const GiftsReceivedContainer = Loadable({
   loading: Loading
 });
 
-// export const GiftCreateContainer = Loadable({
-//   loader: () => import("./gifts/containers/GiftCreateContainer"),
-//   loading: Loading
-// });
-
 export const AddUpdateForm = Loadable({
   loader: () => import("./admin/components/AddUpdateForm"),
   loading: Loading
