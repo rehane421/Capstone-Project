@@ -1,6 +1,6 @@
 import { login, logout, createUser } from "./index";
-import axiosWrapper from "../../../../apis/axiosCreate";
-import userDetails from "../../../../fixtures/userDetails";
+import axiosWrapper from "../../../../../apis/axiosCreate";
+import userDetails from "../../../../../fixtures/userDetails";
 import { LOGIN } from "./types";
 
 const userDetail = { userDetails };

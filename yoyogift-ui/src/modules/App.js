@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Loadable from "react-loadable";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
-import Header from "./header/components/Header";
+import Header from "./common/header/components/Header";
 import Footer from "./common/components/Footer";
 import Landing from "./landing/Landing";
 import history from "./common/components/history";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { LocalizeProvider } from "react-localize-redux";
-import Login from "../modules/header/components/Login";
+import Login from "../modules/common/header/components/Login";
 
 export function Loading({ error }) {
   if (error) {

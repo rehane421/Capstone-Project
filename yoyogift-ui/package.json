@@ -65,7 +65,7 @@
       "!<rootDir>/src/modules/common/utility/Random_rgba.js",
       "!<rootDir>/src/modules/header/state/actions/index.js",
       "!<rootDir>/src/modules/admin/components/AddUpdateForm.js",
-      "!<rootDir>/src/modules/header/components/Login.js"
+      "!<rootDir>/src/modules/common/header/components/Login.js"
     ]
   },
   "scripts": {

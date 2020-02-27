@@ -1,6 +1,6 @@
 import loginReducer from "./loginReducer";
 // import cardList from "../../../../fixtures/cards";
-import userDetails from "../../../../fixtures/userDetails";
+import userDetails from "../../../../../fixtures/userDetails";
 // const cards = { cardList };
 // const card = cards[0];
 const users = { userDetails };
