@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { login } from "../state/actions/index";
 import { GoogleLogin } from "react-google-login";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import TextFieldAtom from "../../atoms/TextField/TextFieldAtom";
+import TextField from "@material-ui/core/TextField";
+// import TextFieldAtom from "../../atoms/TextField/TextFieldAtom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import PermIdentityTwoToneIcon from "@material-ui/icons/PermIdentityTwoTone";
@@ -12,6 +13,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { google } from "../../../config/constants";
 import { connect } from "react-redux";
+import { Formik } from "formik";
+import * as Yup from "yup";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -39,16 +42,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export function Login({ login }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const classes = useStyles();
 
   const responseGoogle = response => {
     login(response);
   };
-  const loginSubmit = e => {
-    e.preventDefault();
-    let data = { email: email, password: password };
+  const loginSubmit = values => {
+    let data = { email: values.email, password: values.password };
     login(data);
   };
   return (
@@ -70,74 +72,91 @@ export function Login({ login }) {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <form className={classes.form} noValidate>
-              <TextFieldAtom
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-                onChange={e => {
-                  setEmail(e.target.value);
-                }}
-                setEmail={setEmail}
-              />
-              <TextFieldAtom
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                onChange={e => {
-                  setPassword(e.target.value);
-                }}
-                setPassword={setPassword}
-              />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
-              <Button
-                id="xyz"
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-                onClick={e => loginSubmit(e)}
-              >
-                Sign In
-              </Button>
-              <GoogleLogin
-                className={classes.submit}
-                clientId={google.loginClientId}
-                buttonText="Continue with Google"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-              />
-
-              {/* <Grid container>
-                <Grid item sm={12}>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid> */}
-            </form>
+            <Formik
+              initialValues={{
+                email: "",
+                password: ""
+              }}
+              onSubmit={values => loginSubmit(values)}
+              validationSchema={Yup.object().shape({
+                email: Yup.string()
+                  .email("Invalid email")
+                  .required("Required"),
+                password: Yup.string().required("required")
+              })}
+            >
+              {props => {
+                const {
+                  values,
+                  touched,
+                  errors,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit
+                } = props;
+                return (
+                  <form onSubmit={handleSubmit}>
+                    <TextField
+                      variant="outlined"
+                      margin="normal"
+                      fullWidth
+                      id="email"
+                      label="Email Address"
+                      name="email"
+                      error={errors.email && touched.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      helperText={errors.email && touched.email && errors.email}
+                      value={values.email}
+                      // onChange={e => {
+                      //   setEmail(e.target.value);
+                      // }}
+                      // setEmail={setEmail}
+                    />
+                    <TextField
+                      variant="outlined"
+                      margin="normal"
+                      fullWidth
+                      name="password"
+                      label="Password"
+                      type="password"
+                      id="password"
+                      autoComplete="current-password"
+                      error={errors.password && touched.password}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      helperText={
+                        errors.password && touched.password && errors.password
+                      }
+                      value={values.password}
+                      // onChange={e => {
+                      //   setPassword(e.target.value);
+                      // }}
+                      // setPassword={setPassword}
+                    />
+                    <Button
+                      id="xyz"
+                      type="submit"
+                      fullWidth
+                      variant="contained"
+                      color="primary"
+                      className={classes.submit}
+                      // onClick={e => loginSubmit(e)}
+                    >
+                      Sign In
+                    </Button>
+                    <GoogleLogin
+                      className={classes.submit}
+                      clientId={google.loginClientId}
+                      buttonText="Continue with Google"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogle}
+                      cookiePolicy={"single_host_origin"}
+                    />
+                  </form>
+                );
+              }}
+            </Formik>
           </div>
           <Box mt={8}></Box>
         </div>

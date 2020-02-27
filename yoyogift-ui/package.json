@@ -16,7 +16,7 @@
     "enzyme-to-json": "^3.4.4",
     "firebase": "^6.6.2",
     "font-awesome": "^4.7.0",
-    "formik": "^1.5.7",
+    "formik": "^1.5.8",
     "fs-extra": "^8.0.1",
     "history": "^4.9.0",
     "lodash": "^4.17.11",
@@ -51,7 +51,8 @@
     "underscore": "^1.9.2",
     "workbox-expiration": "^5.0.0",
     "workbox-routing": "^5.0.0",
-    "workbox-strategies": "^5.0.0"
+    "workbox-strategies": "^5.0.0",
+    "yup": "^0.28.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -63,7 +64,8 @@
       "!<rootDir>/src/store/index.js",
       "!<rootDir>/src/modules/common/utility/Random_rgba.js",
       "!<rootDir>/src/modules/header/state/actions/index.js",
-      "!<rootDir>/src/modules/admin/components/AddUpdateForm.js"
+      "!<rootDir>/src/modules/admin/components/AddUpdateForm.js",
+      "!<rootDir>/src/modules/header/components/Login.js"
     ]
   },
   "scripts": {

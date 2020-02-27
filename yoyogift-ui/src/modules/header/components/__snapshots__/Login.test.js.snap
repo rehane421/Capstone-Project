@@ -36,73 +36,113 @@ exports[`should render Login 1`] = `
         >
           Sign in
         </WithStyles(ForwardRef(Typography))>
-        <form
-          className="makeStyles-form-3"
-          noValidate={true}
-        >
-          <TextFieldAtom
-            autoComplete="email"
-            autoFocus={true}
-            fullWidth={true}
-            id="email"
-            label="Email Address"
-            margin="normal"
-            name="email"
-            onChange={[Function]}
-            required={true}
-            setEmail={[Function]}
-            variant="outlined"
-          />
-          <TextFieldAtom
-            autoComplete="current-password"
-            fullWidth={true}
-            id="password"
-            label="Password"
-            margin="normal"
-            name="password"
-            onChange={[Function]}
-            required={true}
-            setPassword={[Function]}
-            type="password"
-            variant="outlined"
-          />
-          <WithStyles(ForwardRef(Button))
-            className="makeStyles-submit-4"
-            color="primary"
-            fullWidth={true}
-            id="xyz"
-            onClick={[Function]}
-            type="submit"
-            variant="contained"
-          >
-            Sign In
-          </WithStyles(ForwardRef(Button))>
-          <u
-            accessType="online"
-            buttonText="Continue with Google"
-            className="makeStyles-submit-4"
-            clientId="516303551815-8d25h2dq373oq3i92k8hvjnh9tfcbgar.apps.googleusercontent.com"
-            cookiePolicy="single_host_origin"
-            disabledStyle={
-              Object {
-                "opacity": 0.6,
-              }
+        <Formik
+          enableReinitialize={false}
+          initialValues={
+            Object {
+              "email": "",
+              "password": "",
             }
-            fetchBasicProfile={true}
-            icon={true}
-            isSignedIn={false}
-            jsSrc="https://apis.google.com/js/api.js"
-            onFailure={[Function]}
-            onRequest={[Function]}
-            onSuccess={[Function]}
-            prompt=""
-            scope="profile email"
-            tag="button"
-            theme="light"
-            type="button"
-            uxMode="popup"
-          />
-        </form>
+          }
+          isInitialValid={false}
+          onSubmit={[Function]}
+          validateOnBlur={true}
+          validateOnChange={true}
+          validationSchema={
+            ObjectSchema {
+              "_blacklist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "_conditions": Array [],
+              "_defaultDefault": [Function],
+              "_deps": Array [],
+              "_excludedEdges": Array [],
+              "_exclusive": Object {},
+              "_mutate": undefined,
+              "_nodes": Array [
+                "password",
+                "email",
+              ],
+              "_options": Object {
+                "abortEarly": true,
+                "recursive": true,
+              },
+              "_type": "object",
+              "_typeError": [Function],
+              "_whitelist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "fields": Object {
+                "email": StringSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_deps": Array [],
+                  "_exclusive": Object {
+                    "email": false,
+                    "required": true,
+                  },
+                  "_mutate": undefined,
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "string",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "tests": Array [
+                    [Function],
+                    [Function],
+                  ],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                },
+                "password": StringSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_deps": Array [],
+                  "_exclusive": Object {
+                    "required": true,
+                  },
+                  "_mutate": undefined,
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "string",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "tests": Array [
+                    [Function],
+                  ],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                },
+              },
+              "tests": Array [],
+              "transforms": Array [
+                [Function],
+              ],
+            }
+          }
+        >
+          <Component />
+        </Formik>
       </div>
       <Styled(MuiBox)
         mt={8}

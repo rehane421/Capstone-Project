@@ -120,6 +120,7 @@ exports[`should render GiftsListContainer with giftCrds 1`] = `
       >
         <WithStyles(ForwardRef(IconButton))
           disabled={true}
+          onClick={[Function]}
         >
           <pure(SwapVertIcon) />
         </WithStyles(ForwardRef(IconButton))>
