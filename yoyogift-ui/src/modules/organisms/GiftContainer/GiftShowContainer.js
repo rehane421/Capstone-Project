@@ -5,9 +5,9 @@ import {
   userDetails,
   updateUserBalance,
   updateTransact
-} from "../../user/state/actions/index";
-import { fetchCard, updateCardCount } from "../state/actions";
-import GiftShow from "../components/GiftShow";
+} from "../../state/actions/userAction";
+import { fetchCard, updateCardCount } from "../../state/actions/giftsAction";
+import GiftShow from "../../molecules/GiftShow/GiftShow";
 import Snackbar from "../../common/components/Snackbar";
 import * as emailjs from "emailjs-com";
 export class GiftShowContainer extends Component {

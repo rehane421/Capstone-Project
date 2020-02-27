@@ -5,7 +5,7 @@ import {
   REDEEM_CARD,
   UPDATE_BALANCE,
   UPDATE_TRANSACT
-} from "./../actions/types";
+} from "../../actions/userAction/types";
 const INITIAL_STATE = {
   cards: [],
   UserDetails: []

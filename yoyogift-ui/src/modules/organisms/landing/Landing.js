@@ -1,7 +1,7 @@
 import React from "react";
-import Styles from "../../assets/css/Landing.module.css";
+import Styles from "../../../assets/css/Landing.module.css";
 import Button from "@material-ui/core/Button";
-import YoYoGiftImg from "../../assets/images/YoyoGift.png";
+import YoYoGiftImg from "../../../assets/images/YoyoGift.png";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 

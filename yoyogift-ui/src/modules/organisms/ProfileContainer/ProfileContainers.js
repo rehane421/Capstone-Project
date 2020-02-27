@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Profile from "../components/Profile";
+import Profile from "../../molecules/Profile/Profile";
 import { Redirect } from "react-router-dom";
-import { userDetails } from "../state/actions";
+import { userDetails } from "../../state/actions/userAction";
 
 export class ProfileContainers extends Component {
   componentDidMount() {

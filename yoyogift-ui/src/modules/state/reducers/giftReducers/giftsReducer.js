@@ -6,7 +6,7 @@ import {
   UPDATE_CARD_COUNT,
   ADMIN_ADD_CARD,
   ADMIN_UPDATE_CARD
-} from "../actions/types";
+} from "../../actions/giftsAction/types";
 const INITIAL_STATE = {
   giftCards: [],
   giftCardsFiltered: [],

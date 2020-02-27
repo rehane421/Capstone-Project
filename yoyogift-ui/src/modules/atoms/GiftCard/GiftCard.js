@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { Random_rgba } from "../utility/Random_rgba";
+import { Random_rgba } from "../../util/Random_rgba";
 import EditIcon from "@material-ui/icons/BorderColor";
 import { Link } from "react-router-dom";
 import { adminEmail } from "../../../config/constants";

@@ -3,7 +3,7 @@ import InputTypeComponent from "../../common/components/InputTypeComponent";
 import { withRouter } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
-import { adminAddCard, adminUpdateCard } from "../../gifts/state/actions/index";
+import { adminAddCard, adminUpdateCard } from "../../state/actions/giftsAction";
 import history from "../../util/history";
 import { DateFormatter } from "../../util/DateFormatter";
 import Snackbar from "../../common/components/Snackbar";

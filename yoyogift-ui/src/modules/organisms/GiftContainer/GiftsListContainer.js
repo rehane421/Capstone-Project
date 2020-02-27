@@ -1,21 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import GiftsList from "../components/GiftsList";
+import GiftsList from "../../molecules/GiftsList/GiftsList";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import {
   fetchCards,
   fetchCard,
   fetchCardFilter,
   fetchCardSearch
-} from "../state/actions";
+} from "../../state/actions/giftsAction";
 import Select from "@material-ui/core/Select";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import AscendingButton from "@material-ui/icons/SwapVert";
 import IconButton from "@material-ui/core/IconButton";
 import DescendingButton from "@material-ui/icons/SwapVerticalCircle";
 import Tooltip from "@material-ui/core/Tooltip";
-// import { adminEmail } from "../../../config/constants";
 import Grid from "@material-ui/core/Grid";
 import { DebounceInput } from "react-debounce-input";
 // import * as _ from "underscore";

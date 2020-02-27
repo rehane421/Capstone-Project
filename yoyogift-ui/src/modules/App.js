@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Loadable from "react-loadable";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
-import Header from "./common/header/components/Header";
+import Header from "../modules/organisms/header/components/Header";
 import Footer from "../modules/atoms/Footer/Footer";
-import Landing from "./landing/Landing";
+import Landing from "./organisms/landing/Landing";
 import history from "./util/history";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { LocalizeProvider } from "react-localize-redux";
-import Login from "../modules/common/header/components/Login";
+import Login from "../modules/organisms/header/components/Login";
 
 export function Loading({ error }) {
   if (error) {
@@ -33,17 +33,17 @@ export function Loading({ error }) {
 }
 
 export const GiftsListContainer = Loadable({
-  loader: () => import("./gifts/containers/GiftsListContainer"),
+  loader: () => import("./organisms/GiftContainer/GiftsListContainer"),
   loading: Loading
 });
 
 export const ProfileContainers = Loadable({
-  loader: () => import("./user/containers/ProfileContainers"),
+  loader: () => import("./organisms/ProfileContainer/ProfileContainers"),
   loading: Loading
 });
 
 export const GiftShowContainer = Loadable({
-  loader: () => import("./gifts/containers/GiftShowContainer"),
+  loader: () => import("./organisms/GiftContainer/GiftShowContainer"),
   loading: Loading
 });
 
