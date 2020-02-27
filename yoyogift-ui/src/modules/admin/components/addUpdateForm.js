@@ -4,8 +4,8 @@ import { withRouter } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
 import { adminAddCard, adminUpdateCard } from "../../gifts/state/actions/index";
-import history from "../../common/components/history";
-import { DateFormatter } from "../../common/components/DateFormatter";
+import history from "../../util/history";
+import { DateFormatter } from "../../util/DateFormatter";
 import Snackbar from "../../common/components/Snackbar";
 
 export class AddUpdateForm extends Component {

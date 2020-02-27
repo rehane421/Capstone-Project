@@ -8,7 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
-import { DateFormatter } from "../../common/components/DateFormatter";
+import { DateFormatter } from "../../util/DateFormatter";
 
 const styles = theme => ({
   root: {

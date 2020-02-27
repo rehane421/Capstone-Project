@@ -26,7 +26,7 @@ import {
   compareCountDesc,
   compareValidityAsc,
   compareValidityDesc
-} from "../../common/components/CompareForSort";
+} from "../../util/CompareForSort";
 
 const sortCategoryArray = ["Points", "Count", "Validity"];
 export class GiftsListContainer extends React.PureComponent {

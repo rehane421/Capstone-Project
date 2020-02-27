@@ -1,6 +1,6 @@
 import { LOGIN, LOGOUT } from "./types";
 import axiosWrapper from "../../../../../apis/axiosCreate";
-import history from "../../../../common/components/history";
+import history from "../../../../util/history";
 import { apiURL } from "../../../../../config/constants";
 
 //logging
