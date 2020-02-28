@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSentCards } from "../../state/actions/userAction";
-import GiftsSent from "../../molecules/GiftsSend/GiftsSend";
+import GiftsSent from "../../organisms/GiftsSend/GiftsSend";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Redirect } from "react-router-dom";
 

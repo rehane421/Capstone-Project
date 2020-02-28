@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import GiftCard from "../../atoms/GiftCard/GiftCard";
+import GiftCard from "../../molecules/GiftCard/GiftCard";
 import { List, AutoSizer } from "react-virtualized";
 const styles = theme => ({
   root: {
@@ -82,7 +82,7 @@ export class GiftsList extends React.PureComponent {
 }
 
 GiftsList.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object
 };
 
 export default withStyles(styles)(GiftsList);

@@ -50,14 +50,6 @@ const styles = theme => ({
 export class GiftCard extends React.Component {
   state = { expanded: false };
 
-  // handleExpandClick = () => {
-  //   this.setState(state => ({ expanded: !state.expanded }));
-  // };
-
-  // handleClickCard = () => {
-  //   this.props.fetchCard(this.props.giftCard.id);
-  // }
-
   render() {
     const { classes, giftCard, userEmail } = this.props;
 

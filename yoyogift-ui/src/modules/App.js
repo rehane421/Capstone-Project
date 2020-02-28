@@ -38,7 +38,7 @@ export const GiftsListContainer = Loadable({
 });
 
 export const ProfileContainers = Loadable({
-  loader: () => import("./organisms/ProfileContainer/ProfileContainers"),
+  loader: () => import("./pages/ProfileContainer/ProfileContainers"),
   loading: Loading
 });
 
@@ -48,17 +48,17 @@ export const GiftShowContainer = Loadable({
 });
 
 export const GiftsSendContainer = Loadable({
-  loader: () => import("./organisms/userContainer/GiftsSendContainer"),
+  loader: () => import("./pages/userContainer/GiftsSendContainer"),
   loading: Loading
 });
 
 export const GiftsReceivedContainer = Loadable({
-  loader: () => import("./organisms/userContainer/GiftsReceivedContainer"),
+  loader: () => import("./pages/userContainer/GiftsReceivedContainer"),
   loading: Loading
 });
 
 export const AddUpdateForm = Loadable({
-  loader: () => import("./molecules/AddUpdateForm/AddUpdateForm"),
+  loader: () => import("./organisms/AddUpdateForm/AddUpdateForm"),
   loading: Loading
 });
 

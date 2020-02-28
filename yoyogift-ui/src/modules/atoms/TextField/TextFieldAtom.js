@@ -11,20 +11,18 @@ export const TextFieldAtom = ({
   setPassword
 }) => {
   return (
-    <div>
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        id={id}
-        label={label}
-        name={name}
-        autoComplete={name}
-        autoFocus
-        onChange={onChange}
-      />
-    </div>
+    <TextField
+      variant="outlined"
+      margin="normal"
+      required
+      fullWidth
+      id={id}
+      label={label}
+      name={name}
+      autoComplete={name}
+      autoFocus
+      onChange={onChange}
+    />
   );
 };
 export default TextFieldAtom;

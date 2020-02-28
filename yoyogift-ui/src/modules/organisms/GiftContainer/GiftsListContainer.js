@@ -249,7 +249,7 @@ export const mapStateToProps = state => {
 };
 
 GiftsListContainer.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object
 };
 
 export default connect(mapStateToProps, {

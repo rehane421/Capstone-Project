@@ -129,7 +129,7 @@ export class Header extends Component {
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
   isLoggedIn: PropTypes.bool,
-  userDetails: PropTypes.array
+  userDetails: PropTypes.object
 };
 
 export const mapStateToProps = state => {

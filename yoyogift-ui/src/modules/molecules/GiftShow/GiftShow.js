@@ -3,7 +3,7 @@ import Styles from "../../../assets/css/GiftShow.module.css";
 import Grid from "@material-ui/core/Grid";
 import { DateFormatter } from "../../util/DateFormatter";
 import StarRatingComponent from "react-star-rating-component";
-import SendGiftCardDialog from "../../atoms/DraggableDialog/DraggableDialog";
+import SendGiftCardDialog from "../../../modules/organisms/DraggableDialog/DraggableDialog";
 
 export const GiftShow = props => {
   const { data } = props;

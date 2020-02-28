@@ -107,10 +107,6 @@ export function Login({ login }) {
                       onBlur={handleBlur}
                       helperText={errors.email && touched.email && errors.email}
                       value={values.email}
-                      // onChange={e => {
-                      //   setEmail(e.target.value);
-                      // }}
-                      // setEmail={setEmail}
                     />
                     <TextField
                       variant="outlined"
@@ -128,10 +124,6 @@ export function Login({ login }) {
                         errors.password && touched.password && errors.password
                       }
                       value={values.password}
-                      // onChange={e => {
-                      //   setPassword(e.target.value);
-                      // }}
-                      // setPassword={setPassword}
                     />
                     <Button
                       id="xyz"
@@ -140,7 +132,6 @@ export function Login({ login }) {
                       variant="contained"
                       color="primary"
                       className={classes.submit}
-                      // onClick={e => loginSubmit(e)}
                     >
                       Sign In
                     </Button>

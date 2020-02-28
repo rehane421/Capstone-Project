@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Profile from "../../molecules/Profile/Profile";
 import { Redirect } from "react-router-dom";
 import { userDetails } from "../../state/actions/userAction";
+import PropTypes from "prop-types";
 
 export class ProfileContainers extends Component {
   componentDidMount() {
@@ -24,6 +25,10 @@ export class ProfileContainers extends Component {
     }
   }
 }
+
+ProfileContainers.propTypes = {
+  isLoggedIn: PropTypes.bool
+};
 
 export const mapStateToProps = state => {
   return {
