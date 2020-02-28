@@ -26,6 +26,7 @@ export const fetchCard = id => async dispatch => {
 };
 
 export const adminUpdateCard = (id, object) => async dispatch => {
+  console.log("adminUpdateCard clicked", id);
   const response = await axiosWrapper.patch(`/giftCards/${id}`, object);
   dispatch({
     type: ADMIN_UPDATE_CARD,

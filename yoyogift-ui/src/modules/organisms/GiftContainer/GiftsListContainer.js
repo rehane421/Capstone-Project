@@ -13,10 +13,13 @@ import Select from "@material-ui/core/Select";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import AscendingButton from "@material-ui/icons/SwapVert";
 import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
 import DescendingButton from "@material-ui/icons/SwapVerticalCircle";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
+import history from "../../util/history";
 import { DebounceInput } from "react-debounce-input";
+import { adminEmail } from "../../../config/constants";
 // import * as _ from "underscore";
 import {
   comparePointsAsc,
@@ -116,9 +119,9 @@ export class GiftsListContainer extends React.PureComponent {
     this.props.fetchCardFilter(newGiftCard);
   };
 
-  // addUpdateForm = () => {
-  //   history.push("/AddUpdateForm");
-  // };
+  addUpdateForm = () => {
+    history.push("/AddUpdateForm");
+  };
 
   render() {
     if (this.props.giftCards.length === 0) {
@@ -201,7 +204,7 @@ export class GiftsListContainer extends React.PureComponent {
               </Tooltip>
             )}
           </Grid>
-          {/* <Grid item xs={12} sm={3}>
+          <Grid item xs={12} sm={3}>
             {adminEmail.includes(this.props.userDetails.email) ? (
               <Button
                 style={{ marginTop: "2%", marginRight: "3%", marginLeft: "2%" }}
@@ -212,7 +215,7 @@ export class GiftsListContainer extends React.PureComponent {
                 ADD CARD
               </Button>
             ) : null}
-          </Grid> */}
+          </Grid>
           <Grid item xs={12} sm={3}>
             <span>Search</span>
             <DebounceInput
