@@ -13,24 +13,22 @@ export const GiftShow = props => {
       <div className={Styles.detailsPage}>
         <Grid container spacing={0}>
           <Grid item xs={12} sm={5} className={Styles.cardContainer}>
-            <div>
-              <Grid container spacing={0}>
-                <Grid item xs={6} sm={6}>
-                  <img
-                    src={data.cardImage}
-                    alt="vendorImage"
-                    className={Styles.vendorImage}
-                  />
-                </Grid>
-                <Grid item xs={6} sm={6}>
-                  <p className={Styles.cardName}>{data.cardName}</p>
-                  <span style={{ marginLeft: "30%" }}>
-                    <label className={Styles.label}>Points:</label>
-                    {data.cardPoints}
-                  </span>
-                </Grid>
+            <Grid container spacing={0}>
+              <Grid item xs={6} sm={6}>
+                <img
+                  src={data.cardImage}
+                  alt="vendorImage"
+                  className={Styles.vendorImage}
+                />
               </Grid>
-            </div>
+              <Grid item xs={6} sm={6}>
+                <p className={Styles.cardName}>{data.cardName}</p>
+                <span style={{ marginLeft: "30%" }}>
+                  <label className={Styles.label}>Points:</label>
+                  {data.cardPoints}
+                </span>
+              </Grid>
+            </Grid>
             <SendGiftCardDialog
               getEmail={email => {
                 props.getEmail(email);

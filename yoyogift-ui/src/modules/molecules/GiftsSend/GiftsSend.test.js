@@ -18,7 +18,13 @@ describe("GiftsSend", () => {
   let wrapper, props;
 
   props = {
-    data: [],
+    data: [
+      {
+        id: 1,
+        cardName: "Flipkart",
+        isRedeemed: false
+      }
+    ],
     classes: {
       root: "root"
     }

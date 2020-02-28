@@ -8,7 +8,7 @@ import {
 } from "../../state/actions/userAction";
 import { fetchCard, updateCardCount } from "../../state/actions/giftsAction";
 import GiftShow from "../../molecules/GiftShow/GiftShow";
-import Snackbar from "../../common/components/Snackbar";
+import Snackbar from "../../atoms/Snackbar/Snackbar";
 import * as emailjs from "emailjs-com";
 export class GiftShowContainer extends Component {
   state = {

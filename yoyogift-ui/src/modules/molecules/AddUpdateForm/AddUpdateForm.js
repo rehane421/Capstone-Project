@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import InputTypeComponent from "../../common/components/InputTypeComponent";
+import InputTypeComponent from "../../molecules/InputTypeComponent/InputTypeComponent";
 import { withRouter } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
 import { adminAddCard, adminUpdateCard } from "../../state/actions/giftsAction";
 import history from "../../util/history";
 import { DateFormatter } from "../../util/DateFormatter";
-import Snackbar from "../../common/components/Snackbar";
+import Snackbar from "../../atoms/Snackbar/Snackbar";
 
 export class AddUpdateForm extends Component {
   constructor(props) {

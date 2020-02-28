@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GiftShow should render GiftShow 1`] = `
+<div
+  style={
+    Object {
+      "padding": "4%",
+    }
+  }
+>
+  <div
+    className="detailsPage"
+  >
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={0}
+    >
+      <WithStyles(ForwardRef(Grid))
+        className="cardContainer"
+        item={true}
+        sm={5}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          spacing={0}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={6}
+            xs={6}
+          >
+            <img
+              alt="vendorImage"
+              className="vendorImage"
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={6}
+            xs={6}
+          >
+            <p
+              className="cardName"
+            />
+            <span
+              style={
+                Object {
+                  "marginLeft": "30%",
+                }
+              }
+            >
+              <label
+                className="label"
+              >
+                Points:
+              </label>
+            </span>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+        <DraggableDialog
+          getEmail={[Function]}
+        />
+        <p>
+          <label
+            className="label"
+          >
+            NUMBER OF CARDS AVAILABLE:
+             
+          </label>
+        </p>
+        <p>
+          <label
+            className="label"
+          >
+            EXPIRY DATE: 
+          </label>
+          NaN-NaN-NaN
+        </p>
+        <div>
+          <p
+            className="label"
+          >
+             RATING & REVIEWS:
+          </p>
+          <div
+            className="commentsSection"
+          >
+            <p
+              className="commentorName"
+            >
+               
+              ashish
+               
+              roshan
+              <span
+                className="commentDate"
+              >
+                2020-02-28
+              </span>
+            </p>
+            <p
+              className="comment"
+            >
+              Nice discount
+            </p>
+            <StarRatingComponent
+              editing={false}
+              emptyStarColor="#333"
+              name="rating"
+              starColor="#ffb400"
+              starCount={5}
+            />
+          </div>
+        </div>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        className="detailsContainer"
+        item={true}
+        sm={6}
+        xs={12}
+      >
+        <p
+          className="vendorName"
+        />
+        <p
+          className="cardDescription"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </div>
+</div>
+`;

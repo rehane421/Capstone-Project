@@ -2,14 +2,14 @@ import React from "react";
 import Adapter from "enzyme-adapter-react-16";
 import { shallow, configure } from "enzyme";
 import { shallowToJson } from "enzyme-to-json";
-import { Footer } from "../../../../modules/atoms/Footer/Footer";
+import { Footer } from "./Footer";
 configure({ adapter: new Adapter() });
 
 describe("Footer component", () => {
   let wrapper, props;
   beforeEach(() => {
     props = {
-      classes: "root"
+      classes: {}
     };
   });
   it("Should render Footer component", () => {

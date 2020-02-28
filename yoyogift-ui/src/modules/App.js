@@ -48,22 +48,22 @@ export const GiftShowContainer = Loadable({
 });
 
 export const GiftsSendContainer = Loadable({
-  loader: () => import("./user/containers/GiftsSendContainer"),
+  loader: () => import("./organisms/userContainer/GiftsSendContainer"),
   loading: Loading
 });
 
 export const GiftsReceivedContainer = Loadable({
-  loader: () => import("./user/containers/GiftsReceivedContainer"),
+  loader: () => import("./organisms/userContainer/GiftsReceivedContainer"),
   loading: Loading
 });
 
 export const AddUpdateForm = Loadable({
-  loader: () => import("./admin/components/AddUpdateForm"),
+  loader: () => import("./molecules/AddUpdateForm/AddUpdateForm"),
   loading: Loading
 });
 
 export const ErrorPage = Loadable({
-  loader: () => import("./common/components/ErrorPage"),
+  loader: () => import("./atoms/ErrorPage/ErrorPage"),
   loading: Loading
 });
 

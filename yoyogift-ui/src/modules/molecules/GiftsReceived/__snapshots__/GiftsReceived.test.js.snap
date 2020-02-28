@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GiftsReceived should render GiftReceived 1`] = `
+<WithStyles(ForwardRef(Paper))
+  className="root"
+>
+  <WithStyles(ForwardRef(Table))>
+    <WithStyles(ForwardRef(TableHead))>
+      <WithStyles(ForwardRef(TableRow))>
+        <WithStyles(ForwardRef(TableCell))>
+          CARD NAME
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          POINTS
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          RECEIVED FROM
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          CARD DESC
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          ISSUE DATE
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          EXPIRY DATE
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          REDEEM
+        </WithStyles(ForwardRef(TableCell))>
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableHead))>
+    <WithStyles(ForwardRef(TableBody))>
+      <WithStyles(ForwardRef(TableRow))
+        key="1"
+      >
+        <WithStyles(ForwardRef(TableCell))
+          component="th"
+          scope="row"
+        >
+          Flipkart
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell)) />
+        <WithStyles(ForwardRef(TableCell)) />
+        <WithStyles(ForwardRef(TableCell)) />
+        <WithStyles(ForwardRef(TableCell))>
+          NaN-NaN-NaN
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          NaN-NaN-NaN
+        </WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            variant="contained"
+          >
+            Redeem
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(TableCell))>
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableBody))>
+  </WithStyles(ForwardRef(Table))>
+</WithStyles(ForwardRef(Paper))>
+`;

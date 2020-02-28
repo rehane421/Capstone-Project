@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { login, logout, createUser } from "../state/actions";
 import { bindActionCreators } from "redux";
 import history from "../../../util/history";
-import MySnackBar from "../../../common/components/Snackbar";
+import MySnackBar from "../../../atoms/Snackbar/Snackbar";
 import Styles from "../../../../assets/css/Header.module.css";
 
 const styles = {
