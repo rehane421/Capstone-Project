@@ -1,0 +1,44 @@
+[debug] [2020-02-28T11:35:35.566Z] ----------------------------------------------------------------------
+[debug] [2020-02-28T11:35:35.569Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M1050968\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-02-28T11:35:35.570Z] CLI Version:   7.13.0
+[debug] [2020-02-28T11:35:35.570Z] Platform:      win32
+[debug] [2020-02-28T11:35:35.570Z] Node Version:  v12.8.0
+[debug] [2020-02-28T11:35:35.571Z] Time:          Fri Feb 28 2020 17:05:35 GMT+0530 (India Standard Time)
+[debug] [2020-02-28T11:35:35.571Z] ----------------------------------------------------------------------
+[debug] [2020-02-28T11:35:35.571Z] 
+[debug] [2020-02-28T11:35:35.584Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-28T11:35:35.584Z] > authorizing via signed-in user
+[debug] [2020-02-28T11:35:35.585Z] [iam] checking project anytimelibrary-1ce0d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-28T11:35:35.587Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-28T11:35:35.587Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-28T11:35:46.926Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-02-28T11:35:46.929Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-28T11:35:46.929Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-28T11:35:46.946Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-02-28T11:35:46.976Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at Object.<anonymous> (C:\Users\M1050968\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
+    at Module._compile (internal/modules/cjs/loader.js:868:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:879:10)
+    at Module.load (internal/modules/cjs/loader.js:731:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:644:12)
+    at Module.require (internal/modules/cjs/loader.js:771:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (C:\Users\M1050968\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:8:12)
+    at Module._compile (internal/modules/cjs/loader.js:868:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:879:10)
+    at Module.load (internal/modules/cjs/loader.js:731:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:644:12)
+    at Module.require (internal/modules/cjs/loader.js:771:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at loadCommand (C:\Users\M1050968\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
+    at module.exports (C:\Users\M1050968\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:73:20)
+[error] 
+[error] Error: Failed to get Firebase project anytimelibrary-1ce0d. Please make sure the project exists and your account has permission to access it.

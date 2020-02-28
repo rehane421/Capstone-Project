@@ -4,6 +4,7 @@ import {
   fetchCard,
   adminUpdateCard,
   fetchCardFilter,
+  fetchCardSearch,
   adminAddCard,
   updateCardCount
 } from "./index.js";
@@ -12,7 +13,8 @@ import {
   FETCH_CARD_FILTER,
   ADMIN_ADD_CARD,
   UPDATE_CARD_COUNT,
-  ADMIN_UPDATE_CARD
+  ADMIN_UPDATE_CARD,
+  FETCH_CARD_SEARCH
 } from "./types";
 
 describe("fetchCard", () => {
@@ -58,6 +60,19 @@ describe("fetchCard", () => {
     await returnedFunction(dispatch);
     expect(dispatch).toHaveBeenCalledWith({
       type: FETCH_CARD_FILTER,
+      payload: { card: "test" }
+    });
+  });
+
+  it("fetchCardSearch", async () => {
+    axiosWrapper.get = jest
+      .fn()
+      .mockImplementation(() => Promise.resolve({ card: "test" }));
+    const dispatch = jest.fn().mockImplementation(args => {});
+    const returnedFunction = fetchCardSearch({ card: "test" });
+    await returnedFunction(dispatch);
+    expect(dispatch).toHaveBeenCalledWith({
+      type: FETCH_CARD_SEARCH,
       payload: { card: "test" }
     });
   });

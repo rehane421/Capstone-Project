@@ -65,7 +65,7 @@
       "!<rootDir>/src/modules/common/utility/Random_rgba.js",
       "!<rootDir>/src/modules/header/state/actions/index.js",
       "!<rootDir>/src/modules/molecules/GiftsList/GiftsList.js",
-      "!<rootDir>/src/modules/molecules/AddUpdateForm/AddUpdateForm.js",
+      "!<rootDir>/src/modules/organisms/AddUpdateForm/AddUpdateForm.js",
       "!<rootDir>/src/modules/common/header/components/Login.js"
     ]
   },

@@ -123,7 +123,7 @@ exports[`should render Landing 1`] = `
         <img
           alt="Flipkart"
           className="vendorImage"
-          src="http://www.adageindia.in/photo/47460433/Is-Flipkarts-New-Logo-Strong-Enough-To-Behold-Its-Brand-Identity.jpg?19122"
+          src="https://www.adageindia.in/photo/47460433/Is-Flipkarts-New-Logo-Strong-Enough-To-Behold-Its-Brand-Identity.jpg?19122"
         />
         <p
           className="vendorName"
