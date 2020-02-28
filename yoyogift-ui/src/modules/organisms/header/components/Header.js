@@ -127,7 +127,9 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  isLoggedIn: PropTypes.bool,
+  userDetails: PropTypes.array
 };
 
 export const mapStateToProps = state => {

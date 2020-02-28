@@ -66,7 +66,7 @@ const Landing = () => {
           <div className={Styles.vendorContainer}>
             <img
               className={Styles.vendorImage}
-              src="http://www.adageindia.in/photo/47460433/Is-Flipkarts-New-Logo-Strong-Enough-To-Behold-Its-Brand-Identity.jpg?19122"
+              src="https://www.adageindia.in/photo/47460433/Is-Flipkarts-New-Logo-Strong-Enough-To-Behold-Its-Brand-Identity.jpg?19122"
               alt="Flipkart"
             />
             <p className={Styles.vendorName}>Flipkart</p>

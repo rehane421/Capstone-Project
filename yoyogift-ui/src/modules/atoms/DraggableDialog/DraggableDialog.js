@@ -66,13 +66,6 @@ export class DraggableDialog extends React.Component {
               initialValues={{ email: "" }}
               validate={values => {
                 let errors = {};
-                // if (!values.email) {
-                //   errors.email = "Required*";
-                // } else if (
-                //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                // ) {
-                //   errors.email = "Invalid email address";
-                // }
                 errors.email = !values.email
                   ? "Required"
                   : !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
